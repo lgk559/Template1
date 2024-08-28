@@ -111,8 +111,8 @@
 }
 @media only screen and (max-width: 991px) {
   .sub_Swiper .txtBox {
-    top: 7%;
-    width: 80%;
+    top: 5%;
+    width: 90%;
   }
 }
 .sub_Swiper .bg, .sub_Swiper .bg div {
@@ -125,17 +125,11 @@
   left: 0;
 }
 .sub_Swiper .bg div {
-  -webkit-clip-path: xywh(50% 50% 0% 10% round 2rem 2rem);
-          clip-path: xywh(50% 50% 0% 10% round 2rem 2rem);
-  transition: -webkit-clip-path 0.8s 0.1s !important;
-  transition: clip-path 0.8s 0.1s !important;
-  transition: clip-path 0.8s 0.1s, -webkit-clip-path 0.8s 0.1s !important;
-}
-@media only screen and (max-width: 991px) {
-  .sub_Swiper .bg div {
-    -webkit-clip-path: xywh(0% 5% 95% 70% round 2rem 2rem);
-            clip-path: xywh(0% 5% 95% 70% round 2rem 2rem);
-  }
+  -webkit-clip-path: circle(0% at 100% 100%);
+          clip-path: circle(0% at 100% 100%);
+  transition: -webkit-clip-path 1s 0s !important;
+  transition: clip-path 1s 0s !important;
+  transition: clip-path 1s 0s, -webkit-clip-path 1s 0s !important;
 }
 .sub_Swiper .cover {
   width: 50%;
@@ -144,7 +138,7 @@
   /* bottom: 0; */
   top: -5%;
   left: 35%;
-  opacity: 1;
+  opacity: 0.8;
 }
 @media only screen and (max-width: 991px) {
   .sub_Swiper .cover {
@@ -159,13 +153,13 @@
   width: 100%;
 }
 .sub_Swiper .swiper-slide-active .bg div {
-  -webkit-clip-path: xywh(0% 0% 100% 98% round 2rem 2rem);
-          clip-path: xywh(0% 0% 100% 98% round 2rem 2rem);
+  -webkit-clip-path: circle(100% at 50% 50%);
+          clip-path: circle(100% at 50% 50%);
 }
 @media only screen and (max-width: 991px) {
   .sub_Swiper .swiper-slide-active .bg div {
-    -webkit-clip-path: xywh(5% 0% 90% 100% round 2rem 2rem);
-            clip-path: xywh(5% 0% 90% 100% round 2rem 2rem);
+    -webkit-clip-path: unset;
+            clip-path: unset;
   }
 }
 .sub_Swiper .swiper-slide-active .txtBox {
@@ -211,4 +205,4 @@
 footer a {
   color: inherit;
   text-decoration: none;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main2.css.map */

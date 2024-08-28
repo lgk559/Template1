@@ -13,7 +13,7 @@
     --bs-light: #fff;
     --bs-dark: #000;
     --navbar-color-color: #131814;
-    --swiper-theme-color: #787d62 !important;
+    --swiper-theme-color: #fff !important;
     --swiper-pagination-color: #787d62 !important;
   
   }
@@ -75,6 +75,15 @@
   }
 
   // 輪播
+  .news_Swiper {
+    width: 100%;
+    height: 50vw;
+    max-height: 600px;
+    max-width: 890px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+  }
   .box {
     width: 100%;
     height: 50vw;
@@ -104,8 +113,8 @@
         opacity: 0;
         color: #fff;
         @media only screen and (max-width: 991px) {
-          top: 5%;
-          width: 90%;
+          top: 7%;
+          width: 80%;
         }
     }
     .bg, .bg div{
@@ -117,8 +126,13 @@
         top: 0;
         left: 0;
         div {
-            clip-path: circle(0% at 100% 100%);
-            transition: clip-path 1s 0s !important;
+            // clip-path: circle(0% at 100% 100%);
+            // clip-path: circle(0% at 50% -50%);
+            clip-path: xywh(50% 50% 0% 10% round 2rem 2rem);
+            transition: clip-path 0.8s 0.1s !important;
+            @media only screen and (max-width: 991px) {
+              clip-path: xywh(0% 5% 95% 70% round 2rem 2rem);
+            }
         }
     }
     .cover {
@@ -128,7 +142,7 @@
       /* bottom: 0; */
       top: -5%;
       left: 35%;
-      opacity: 0.8;
+      opacity: 1;
       @media only screen and (max-width: 991px) {
         top: unset;
         bottom: 10%;
@@ -146,9 +160,12 @@
     .swiper-slide-active {
         .bg {
             div {
-                clip-path: circle(100% at 50% 50%);
+                // clip-path: circle(100% at 50% 50%);
+                clip-path: xywh(0% 0% 100% 98% round 2rem 2rem);
+                
                 @media only screen and (max-width: 991px) {
-                  clip-path: unset;
+                  // clip-path: unset;
+                  clip-path: xywh(5% 0% 90% 100% round 2rem 2rem);
                 }
             }
         }
@@ -205,4 +222,11 @@
         }
     }
 
+}
+
+footer {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }

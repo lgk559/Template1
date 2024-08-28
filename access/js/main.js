@@ -27,8 +27,8 @@
                 slideShadows: true,
             },
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper_index-button-next',
+                prevEl: '.swiper_index-button-prev',
             },
             thumbs: {
                 swiper: {
@@ -39,8 +39,38 @@
                     noSwiping: true,
                     // centeredSlides: true,
                 },
-            }
+            },
+            // creativeEffect: {
+            //     prev: {
+            //     //   shadow: true,
+            //       translate: ["-10%", 0, -1],
+            //     },
+            //     next: {
+            //       translate: ["100%", 0, 0],
+            //     },
+            // },
         });
+
+        const news = new Swiper('.news_Swiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            // loop: true,
+            navigation: {
+                nextEl: '.swiper_news-button-next',
+                prevEl: '.swiper_news-button-prev',
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+                clickable :true,
+            },
+            breakpoints: {
+                991: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+            }
+        })
 
 
     }); // End of a document
