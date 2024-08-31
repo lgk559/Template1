@@ -74,16 +74,26 @@
     }
   }
 
-  // 輪播
+  // 新聞輪播
   .news_Swiper {
     width: 100%;
     height: 50vw;
     max-height: 600px;
-    max-width: 890px;
+    max-width: 1200px;
     position: relative;
     overflow: hidden;
     margin: 0 auto;
+    cursor: pointer;
+    .news-img {
+      overflow: hidden;
+    }
+    .card:hover img{
+      transform: scale(1.1);
+      transition: transform 0.5s;
+    }
   }
+
+  // 商品輪播
   .box {
     width: 100%;
     height: 50vw;
@@ -222,6 +232,17 @@
         }
     }
 
+}
+
+// kv輪播
+.kv_Swiper {
+  .swiper-pagination {
+    right: 12% !important;
+  }
+  .swiper-pagination-bullet {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 footer {

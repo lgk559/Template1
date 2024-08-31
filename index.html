@@ -70,6 +70,17 @@
       </div>
     </nav>
   </header>
+  <div class="kv">
+    <div class="swiper kv_Swiper" style="height: 500px;">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
   <div class="box">
     <div class="swiper sub_Swiper">
       <div class="swiper-wrapper">
@@ -154,7 +165,9 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="card">
-          <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
+          <div class="news-img">
+            <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
+          </div>
           <div class="card-body">
             <p class="card-text">1Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
@@ -162,7 +175,9 @@
       </div>
       <div class="swiper-slide">
         <div class="card">
-          <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
+          <div class="news-img">
+            <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
+          </div>
           <div class="card-body">
             <p class="card-text">2Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
@@ -170,7 +185,9 @@
       </div>
       <div class="swiper-slide">
         <div class="card">
-          <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
+          <div class="news-img">
+            <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
+          </div>
           <div class="card-body">
             <p class="card-text">3ome quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
@@ -178,7 +195,9 @@
       </div>
       <div class="swiper-slide">
         <div class="card">
-          <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
+          <div class="news-img">
+            <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
+          </div>
           <div class="card-body">
             <p class="card-text">4Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           </div>
@@ -189,11 +208,16 @@
     <div class="swiper-button-prev swiper_news-button-prev"></div><!--左箭头。如果放置在swiper外面，需要自定义样式。-->
     <div class="swiper-button-next swiper_news-button-next"></div><!--右箭头。如果放置在swiper外面，需要自定义样式。-->
   </div>
+
+  <div class="mt-5 text-center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/h3ZjFEF2lCA?si=6XbhFXrXCusJ6JW1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
   <footer id="footer" class="overflow-hidden padding-large mt-5 border-top pt-3">
     <div class="container-fluid">
       <div class="row">
         <div class="row d-flex flex-wrap justify-content-center text-center">
-          <!-- <div class="col-lg-3 col-sm-6 pb-3 pe-4">
+          <div class="col-lg-3 col-sm-6 pb-3 pe-4">
             <div class="footer-menu">
               <img src="images/main-logo.png" alt="logo" class="pb-3">
               <p>Mi facilisis facilisis orci vitae. Cum nisi morbi integer tincidunt ornare ac praesent in. Dolor tempus arcu sit quis nunc arcu facilisis quis eget nisi morbi integer.</p>
@@ -202,9 +226,9 @@
               <p>© Copyright. <a target="_blank" href="http://www.mobanwang.com/" title="网页模板">网页模板</a>
               </p>
             </div>
-          </div> -->
+          </div>
 
-          <div class="col-lg-5 col-sm-6">
+          <div class="col-lg-4 col-sm-6">
             <div class="footer-menu text-uppercase">
               <h5 class="widget-title pb-2">快速連結</h5>
               <ul class="menu-list list-unstyled text-uppercase">
@@ -241,7 +265,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-5 col-sm-6">
+          <div class="col-lg-3 col-sm-6">
             <div class="footer-menu contact-item">
               <h5 class="widget-title text-uppercase pb-2">網站使用條款</h5>
               <p><a href="">網站使用條款</a></p>

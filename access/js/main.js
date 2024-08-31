@@ -60,7 +60,7 @@
                 prevEl: '.swiper_news-button-prev',
             },
             pagination: {
-                el: ".swiper-pagination",
+                el: ".news_Swiper .swiper-pagination",
                 dynamicBullets: true,
                 clickable :true,
             },
@@ -70,6 +70,17 @@
                     spaceBetween: 10
                 },
             }
+        })
+
+        const kv_Swiper = new Swiper('.kv_Swiper', {
+            // loop: true,
+            direction: 'vertical',
+            autoplay: true,
+            pagination: {
+                el: ".kv_Swiper .swiper-pagination",
+                dynamicBullets: false,
+                clickable :true,
+            },
         })
 
 
