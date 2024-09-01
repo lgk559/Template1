@@ -7,8 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Documentttt</title>
   <link rel="stylesheet" type="text/css" href="access/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="access/css/main.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <!-- Jarallax CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="access/css/main.css?v=001">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -17,8 +19,8 @@
 
 </head>
 
-<body>
-  <header id="header" class="site-header text-black sticky-top bg-light text-dark">
+<body class="container-fluid">
+  <header id="header" class="row site-header text-black sticky-top bg-light text-dark">
     <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
@@ -40,29 +42,17 @@
           </div>
           <div class="offcanvas-body">
             <ul id="navbar" class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
-              <li class="nav-item dropdown">
-                <a class="nav-link me-4 active dropdown-toggle" href="#billboard" id="dropdownPages"
-                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">飲品介紹</a>
-                <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownPages">
-                  <li>
-                    <a href="index.html" class="dropdown-item item-anchor">茶類系列</a>
-                  </li>
-                  <li>
-                    <a href="home2.html" class="dropdown-item item-anchor">創意特調</a>
-                  </li>
-                  <li>
-                    <a href="home2.html" class="dropdown-item item-anchor">歐蕾特調</a>
-                  </li>
-                </ul>
-              </li>
               <li class="nav-item">
-                <a class="nav-link me-4" href="#about-us">關於我們</a>
+                <a class="nav-link me-4" href="#about">關於我們</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link" href="#">門市據點</a>
+                <a class="nav-link" href="#Services">多元服務</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link" href="#">最新消息</a>
+                <a class="nav-link" href="#Customers">客戶評價</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link" href="#Customers">聯絡我們</a>
               </li>
             </ul>
           </div>
@@ -70,18 +60,137 @@
       </div>
     </nav>
   </header>
-  <div class="kv">
+  <section id="kv" class="kv row">
     <div class="swiper kv_Swiper" style="height: 500px;">
       <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide">
+          <img class="" src="access/images/banner-bg_01.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="" src="access/images/banner-bg_02.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img class="" src="access/images/banner-bg_03.jpg" alt="">
+        </div>
       </div>
       <!-- 如果需要分页器 -->
       <div class="swiper-pagination"></div>
     </div>
-  </div>
-  <div class="box">
+  </section>
+  <!-- 關於我們 ABOUT -->
+  <section id="about" class="row mt-5">
+    <div class="col-12">
+      <h2 class="text-center  ">關於我們 ABOUT</h2>
+      <div class=" info px-5 py-3">
+        <p>在一個充滿色彩的夢幻工作室裡，一群熱愛藝術的調色師們，以世界各地的珍奇食材和天然色素為顏料，調配出色彩繽紛的飲品。每一杯飲品，都是一幅獨一無二的藝術作品，訴說著來自世界各地的故事。</p>
+        <p>我們的靈感來自於大自然的多彩多姿。從熱帶雨林的鮮豔果實，到地中海的湛藍海水，再到北歐的澄澈湖泊，我們將這些美好的色彩濃縮在每一杯飲品中。同時，我們也從世界各地的傳統文化中汲取靈感，將異國風味融入我們的調色盤。</p>
+        <p>我們相信，色彩不僅僅是一種視覺享受，更是一種情感的表達。每一個色彩都承載著不同的故事和情感，而我們的飲品，就是將這些故事和情感傳遞給您的媒介。</p>
+      </div>
+    </div>
+    <div class="jarallax">
+      <img src="access/images/author-item.jpg" class="img-fluid jarallax-img">
+    </div>
+  </section>
+  <!-- 多元服務 Services -->
+  <section id="Services" class="row mt-5 position-relative">
+      <div class="col-12">
+        <h2 class="text-center  ">多元服務 Services</h2>
+        <div class=" info  px-5 py-3">
+          <p>我們希望透過色彩繽紛的飲品，將世界的美好帶給每一個人，每款飲品都是一次味蕾的冒險，讓大家在忙碌的生活中，找到一份屬於自己的色彩，感受生活的美好。</p>
+         </div>
+      </div>
+    <div class="col-12 Services-main d-flex">
+      <div class="item mx-1">
+        <div class="item-info position-relative overflow-hidden">
+          <div class="item-bg cover"></div>
+          <img class="item-img img-fluid" src="access/images/author-item.jpg" alt="">
+          <div class="item-text">
+            精美的設計
+          </div>
+        </div>
+      </div>
+      <div class="item mx-1">
+        <div class="item-info position-relative overflow-hidden">
+          <div class="item-bg cover"></div>
+          <img class="item-img img-fluid" src="access/images/author-item.jpg" alt="">
+          <div class="item-text">
+            精美的設計
+          </div>
+        </div>
+      </div>
+      <div class="item mx-1">
+        <div class="item-info position-relative overflow-hidden" >
+          <div class="item-bg cover"></div>
+          <img class="item-img img-fluid" src="access/images/author-item.jpg" alt="">
+          <div class="item-text">
+            精美的設計
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 客戶評價 Customers says -->
+  <section id="Customers" class="row mt-5 position-relative">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-center mb-4">客戶評價 Customers says</h2>
+      </div>
+    </div>
+    <div class="row Customers-swiper swiper">
+      <div class="scrollBox swiper-wrapper">
+        <div class="item swiper-slide">
+          <div class="item-img">
+            <img class="img-fluid" src="https://fakeimg.pl/50x50/ccc/" alt="">
+          </div>
+          <div class="item-text">
+            <p>選用天然食材，堅持健康、環保的理念，
+              將藝術融入生活，讓每一杯飲品都成為一件藝術品。</p>  
+          </div>
+        </div>
+        <div class="item swiper-slide">
+          <div class="item-img">
+            <img class="img-fluid" src="https://fakeimg.pl/50x50/ccc/" alt="">
+          </div>
+          <div class="item-text">
+            <p>選用天然食材，堅持健康、環保的理念，
+              將藝術融入生活，讓每一杯飲品都成為一件藝術品。</p>  
+          </div>
+        </div>
+        <div class="item swiper-slide">
+          <div class="item-img">
+            <img class="img-fluid" src="https://fakeimg.pl/50x50/ccc/" alt="">
+          </div>
+          <div class="item-text">
+            <p>選用天然食材，堅持健康、環保的理念，
+              將藝術融入生活，讓每一杯飲品都成為一件藝術品。</p>  
+          </div>
+        </div>
+        <div class="item swiper-slide">
+          <div class="item-img">
+            <img class="img-fluid" src="https://fakeimg.pl/50x50/ccc/" alt="">
+          </div>
+          <div class="item-text">
+            <p>選用天然食材，堅持健康、環保的理念，
+              將藝術融入生活，讓每一杯飲品都成為一件藝術品。</p>  
+          </div>
+        </div>
+        <div class="item swiper-slide">
+          <div class="item-img">
+            <img class="img-fluid" src="https://fakeimg.pl/50x50/ccc/" alt="">
+          </div>
+          <div class="item-text">
+            <p>選用天然食材，堅持健康、環保的理念，
+              將藝術融入生活，讓每一杯飲品都成為一件藝術品。</p>  
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev swiper_Customers-button-prev"></div><!--左箭头。如果放置在swiper外面，需要自定义样式。-->
+      <div class="swiper-button-next swiper_Customers-button-next"></div><!--右箭头。如果放置在swiper外面，需要自定义样式。-->
+    </div>
+  </section>
+
+  <div class="box mt-5">
     <div class="swiper sub_Swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide page1">
@@ -161,6 +270,7 @@
     <div class="swiper-button-next swiper_index-button-next"></div><!--右箭头。如果放置在swiper外面，需要自定义样式。-->
   </div>
 
+  <!-- 最新消息 -->
   <div class="swiper news_Swiper mt-5">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -169,7 +279,8 @@
             <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
-            <p class="card-text">1Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">1Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
           </div>
         </div>
       </div>
@@ -179,7 +290,8 @@
             <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
-            <p class="card-text">2Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">2Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
           </div>
         </div>
       </div>
@@ -189,7 +301,8 @@
             <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
-            <p class="card-text">3ome quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">3ome quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
           </div>
         </div>
       </div>
@@ -199,7 +312,8 @@
             <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
           </div>
           <div class="card-body">
-            <p class="card-text">4Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">4Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
           </div>
         </div>
       </div>
@@ -209,18 +323,34 @@
     <div class="swiper-button-next swiper_news-button-next"></div><!--右箭头。如果放置在swiper外面，需要自定义样式。-->
   </div>
 
-  <div class="mt-5 text-center">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/h3ZjFEF2lCA?si=6XbhFXrXCusJ6JW1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
+  <!-- 影音 -->
+  <section class="row mt-5 text-center">
+      <!-- <iframe class="jarallax-video" width="560" height="315" src="https://www.youtube.com/embed/h3ZjFEF2lCA?si=6XbhFXrXCusJ6JW1&rel=0&loop=1&mute=1&autoplay=1&controls=0"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+      <!-- <div class="jarallax" data-video-src="https://www.youtube.com/watch?v=ab0TSkLe-E0" data-speed="1"></div> -->
+      <div class="jarallax" data-jarallax data-speed="0.5" data-video-src="https://youtu.be/mru3Q5m4lkY"></div>
+  </section>
 
-  <footer id="footer" class="overflow-hidden padding-large mt-5 border-top pt-3">
+  <!-- 聯絡我們 contact -->
+  <section id="Customers" class="row mt-5 position-relative">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="text-center mb-4">聯絡我們 contact</h2>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer" class="row overflow-hidden padding-large mt-5 border-top pt-3">
     <div class="container-fluid">
       <div class="row">
         <div class="row d-flex flex-wrap justify-content-center text-center">
           <div class="col-lg-3 col-sm-6 pb-3 pe-4">
             <div class="footer-menu">
               <img src="images/main-logo.png" alt="logo" class="pb-3">
-              <p>Mi facilisis facilisis orci vitae. Cum nisi morbi integer tincidunt ornare ac praesent in. Dolor tempus arcu sit quis nunc arcu facilisis quis eget nisi morbi integer.</p>
+              <p>Mi facilisis facilisis orci vitae. Cum nisi morbi integer tincidunt ornare ac praesent in. Dolor tempus
+                arcu sit quis nunc arcu facilisis quis eget nisi morbi integer.</p>
             </div>
             <div class="copyright">
               <p>© Copyright. <a target="_blank" href="http://www.mobanwang.com/" title="网页模板">网页模板</a>
@@ -270,7 +400,7 @@
               <h5 class="widget-title text-uppercase pb-2">網站使用條款</h5>
               <p><a href="">網站使用條款</a></p>
               <p><a href="">隱私保護聲明</a></p>
-              
+
             </div>
           </div>
         </div>
@@ -283,13 +413,21 @@
     </div>
   </footer>
 
-  <script src="access/js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script> -->
   <script type="text/javascript" src="access/js/bootstrap.bundle.min.js"></script>
+  <!-- Jarallax JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+  <!-- Jarallax JS: Optional video extension -->
+  <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax-video.min.js"></script>
+  <script src="access/js/gsap.min.js"></script>
+  <script src="access/js/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap/dist/Observer.min.js"></script>
+
   <!-- <script type="text/javascript" src="access/js/plugins.js"></script> -->
-  <script src="access/js/main.js"></script>
+  <script src="access/js/main.js?v=001"></script>
 </body>
 
 </html>
