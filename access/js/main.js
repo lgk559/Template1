@@ -86,9 +86,11 @@
 
         const Customers_swiper = new Swiper('.Customers-swiper', {
             // loop: true,
-            slidesPerView: 3,
+            slidesPerView: 2.5,
             spaceBetween: 30,
             freeMode: true,
+            centeredSlides: true,
+            loop: true,
             navigation: {
                 nextEl: '.swiper_Customers-button-next',
                 prevEl: '.swiper_Customers-button-prev',
@@ -103,36 +105,27 @@
         // init jarallax parallax
         var initJarallax = function () {
             jarallax(document.querySelectorAll(".jarallax"));
-
             jarallax(document.querySelectorAll(".jarallax-img"), {
                 keepImg: true,
             });
         }
-        // $('.jarallax-video').jarallax({
-        //     videoVolume: 0,
-        //     speed: 0.2,
-        //     // keepImg: true,
-        // })
         initJarallax();
+
         // init gasp
         setTimeout(function () { 
-    
             gsap.registerPlugin(ScrollTrigger);
             gsap.utils.toArray(".item-bg").forEach((item, i) => {
-                console.log(item)
                 gsap.to(item, {
                     left: "120%",
                     duration: 2,
                     ease: "slow(0.1,0.4,false)",
-                    // delay:0.5,
                     scrollTrigger: {  
                     trigger: '.Services-main',
                     markers: false,
                     start: "top bottom", 
                     end: "bottom top",
                     toggleActions: "restart pause restart pause",
-                }
-            
+                }          
                 });
             });
          }, 1000);
