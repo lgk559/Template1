@@ -73,7 +73,7 @@
         })
 
         const kv_Swiper = new Swiper('.kv_Swiper', {
-            // loop: true,
+            loop: true,
             direction: 'vertical',
             autoplay: true,
             mousewheel: true,
@@ -86,20 +86,33 @@
 
         const Customers_swiper = new Swiper('.Customers-swiper', {
             // loop: true,
-            slidesPerView: 2.5,
-            spaceBetween: 30,
+            slidesPerView: 1,
+            spaceBetween: 0,
             freeMode: true,
-            centeredSlides: true,
+            centeredSlides: false,
             loop: true,
-            navigation: {
-                nextEl: '.swiper_Customers-button-next',
-                prevEl: '.swiper_Customers-button-prev',
-            },
+            // navigation: {
+            //     nextEl: '.swiper_Customers-button-next',
+            //     prevEl: '.swiper_Customers-button-prev',
+            // },
             // pagination: {
             //     el: ".kv_Swiper .swiper-pagination",
             //     dynamicBullets: false,
             //     clickable: true,
             // },
+            breakpoints: {
+                
+                991: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                },
+                576: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                },
+            }
         })
 
         // init jarallax parallax
@@ -128,6 +141,33 @@
                 }          
                 });
             });
+
+            gsap.utils.toArray(".js-scroll-item").forEach(item => {
+                let href = item.getAttribute("href")
+                console.log(item,href)
+                // let menuDom = $(item).parent().parent().parent()
+                // console.log(menuDom)
+                let offset = item.getAttribute("data-offset") ? item.getAttribute("data-offset") : 0
+                const eachTop = $(href).offset().top - $('#header').height() - offset
+                gsap.to(href, {
+                  scrollTrigger: {
+                    trigger: href,
+                    markers: false,
+                    start: "top 40%",
+                    end: "bottom 20%",
+                    onEnter: () => { $(`#header a[href='${href}']`).addClass('active') },
+                    onEnterBack: () => { $(`#header a[href='${href}']`).addClass('active') },
+                    onLeave: () => { $(`#header a[href='${href}']`).removeClass('active') },
+                    onLeaveBack: () => { $(`#header a[href='${href}']`).removeClass('active') },
+                  },
+                })
+                item.addEventListener('click', function (e) {
+                  e.preventDefault()
+                  // console.log(item, eachTop)
+                  $("html, body").animate({ scrollTop: eachTop }, 600);
+                })
+              })
+
          }, 1000);
         
 

@@ -1,3 +1,8 @@
+.btn-outline-gold {
+  color: #F8D06B;
+  border-color: #F8D06B;
+}
+
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
@@ -69,6 +74,19 @@
     display: none;
   }
 }
+#header {
+  background-color: rgba(20, 137, 195, 0.7);
+}
+#header .nav-link.active, #header .nav-link:not(.logo):hover {
+  color: #0b64d8;
+  opacity: 1;
+  font-weight: 600;
+}
+#header .nav-link.active:after, #header .nav-link:not(.logo):hover:after {
+  width: 100%;
+  max-width: 3rem;
+}
+
 .news_Swiper {
   width: 100%;
   height: 50vw;
@@ -216,6 +234,9 @@
   opacity: 1;
 }
 
+.kv_Swiper {
+  cursor: ns-resize;
+}
 .kv_Swiper .swiper-pagination {
   right: 12% !important;
 }
@@ -251,6 +272,11 @@ footer a {
   max-width: 700px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 991px) {
+  #about .info {
+    width: 100%;
+  }
+}
 #about .jarallax-img {
   width: 100%;
   -o-object-fit: cover;
@@ -261,6 +287,15 @@ footer a {
   position: relative;
   width: 80%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 991px) {
+  #Services {
+    width: 100%;
+  }
+}
+#Services .item:hover .item-img {
+  transform: scale(1.1);
+  transition: transform 0.5s;
 }
 #Services .cover {
   position: absolute;
@@ -282,10 +317,13 @@ footer a {
   border: 1px solid #fff;
   width: 90%;
   height: 90%;
+  padding: 0 5%;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: self-start;
+  pointer-events: none;
 }
 
 #Customers {
@@ -297,12 +335,17 @@ footer a {
 }
 #Customers .item {
   display: flex;
+  justify-content: center;
+  color: #ccc;
+}
+#Customers .item.swiper-slide-active {
+  color: #121212;
 }
 #Customers .item-img {
   margin-right: 3%;
 }
 #Customers .item-img img {
-  width: 150px;
+  width: 4rem;
   height: auto;
   border-radius: 50%;
   border: 1px solid;
@@ -311,11 +354,42 @@ footer a {
   -o-object-position: center;
      object-position: center;
 }
+#Customers .item-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  flex-direction: column;
+  text-align: center;
+}
+#Customers .customer-name::before {
+  position: relative;
+  content: "---";
+  left: 0;
+}
+#Customers .Customers-swiper {
+  cursor: ew-resize;
+}
+@media only screen and (min-width: 992px) {
+  #Customers .swiper_Customers-button-prev {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #Customers .swiper_Customers-button-next {
+    display: none;
+  }
+}
 
 #contact {
   position: relative;
   width: 70%;
   margin: 0 auto;
+}
+@media only screen and (max-width: 991px) {
+  #contact {
+    width: 100%;
+  }
 }
 #contact iframe.map {
   width: 100%;
@@ -335,12 +409,9 @@ iframe {
 
 #e-newsletter {
   position: relative;
+  background-color: #ccc;
 }
 #e-newsletter .infoBox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 70%;
   margin: 0 auto;
   display: flex;

@@ -1,4 +1,5 @@
 
+@import '_custom_bootstrap.scss';
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
@@ -71,6 +72,22 @@
   @media only screen and (max-width: 991px) {
     #navbar .user-items {
       display: none;
+    }
+  }
+
+  #header {
+    background-color: rgba(20, 137, 195, 0.7);
+    .nav-link {
+      &.active,
+      &:not(.logo):hover {
+        color: #0b64d8;
+        opacity: 1;
+        font-weight: 600;
+        &:after {
+          width: 100%;
+          max-width: 3rem;
+        }
+      }
     }
   }
 
@@ -236,6 +253,7 @@
 
 // kv輪播
 .kv_Swiper {
+  cursor: ns-resize;
   .swiper-pagination {
     right: 12% !important;
   }
@@ -272,6 +290,9 @@ footer {
     width: 80%;
     max-width: 700px;
     margin: 0 auto;
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+    }
   }
   .jarallax-img {
     width: 100%;
@@ -285,6 +306,16 @@ footer {
   position: relative;
   width: 80%;
   margin: 0 auto;
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+  }
+  // .item {
+  //   width: 100%;
+  // }
+  .item:hover .item-img {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+  }
   .cover {
     position: absolute;
     top: 0;
@@ -307,10 +338,13 @@ footer {
     border: 1px solid #fff;
     width: 90%;
     height: 90%;
+    padding: 0 5%;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: self-start;
+    pointer-events: none;
   }
 }
 // 客戶評價 Customers
@@ -326,12 +360,18 @@ footer {
   // }
   .item {
     display: flex;
+    justify-content: center;
+    color: #ccc;
     // width: 200px;
+    &.swiper-slide-active {
+      color: #121212;
+    }
   }
   .item-img  {
     margin-right: 3%;
+    
     img{
-      width: 150px;
+      width: 4rem;
       height: auto;
       border-radius: 50%;
       border: 1px solid;
@@ -339,7 +379,36 @@ footer {
       object-position: center;
     }
   }
-  
+  .item-text {
+    // max-width: 50%;
+    width: 100%;
+    // flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    flex-direction: column;
+    text-align: center;
+  }
+  .customer-name {
+    &::before {
+      position: relative;
+      content: "---";
+      left: 0;
+    }
+  }
+  .Customers-swiper {
+    cursor: ew-resize;
+  }
+  .swiper_Customers-button-prev {
+    @media only screen and (min-width: 992px) {
+      display: none;
+    }
+  }
+  .swiper_Customers-button-next {
+    @media only screen and (min-width: 992px) {
+      display: none;
+    }
+  }
 }
 
 // 聯絡我們 contact
@@ -347,6 +416,9 @@ footer {
   position: relative;
   width: 70%;
   margin: 0 auto;
+  @media only screen and (max-width: 991px) {
+    width: 100%;
+  }
   iframe.map {
     width: 100%;
     max-height: 400px;
@@ -367,11 +439,12 @@ iframe {
 // e-newsletter
 #e-newsletter {
   position: relative;
+  background-color: #ccc;
   .infoBox {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
     width: 70%;
     margin: 0 auto;
     display: flex;

@@ -21,17 +21,15 @@
 </head>
 
 <body class="container-fluid">
-  <header id="header" class="row site-header text-black sticky-top bg-light text-dark">
-    <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
+  <header id="header" class="row site-header text-black sticky-top text-dark">
+    <nav id="header-nav" class="navbar navbar-expand-lg px-3">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand p-0" href="index.html">
           <img src="https://fakeimg.pl/100x50/ccc/" class="logo">
         </a>
-        <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
+        <button class="navbar-toggler d-flex d-lg-none order-3 p-0" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <svg class="navbar-icon" width="50" height="50">
-            <use xlink:href="#navbar-icon"></use>
-          </svg>
+          <i class="bi bi-list"></i>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
           <div class="offcanvas-header px-4 pb-0">
@@ -44,16 +42,16 @@
           <div class="offcanvas-body">
             <ul id="navbar" class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link me-4" href="#about">關於我們</a>
+                <a class="nav-link js-scroll-item me-4" href="#about" data-offset="50">關於我們</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link" href="#Services">多元服務</a>
+                <a class="nav-link js-scroll-item" href="#Services" data-offset="50">多元服務</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link" href="#Customers">客戶評價</a>
+                <a class="nav-link js-scroll-item" href="#Customers" data-offset="0">客戶評價</a>
               </li>
               <li class="nav-item me-4">
-                <a class="nav-link" href="#contact">聯絡我們</a>
+                <a class="nav-link js-scroll-item" href="#contact" data-offset="50">聯絡我們</a>
               </li>
             </ul>
           </div>
@@ -82,7 +80,7 @@
   <section id="about" class="row mt-5">
     <div class="col-12">
       <h2 class="text-center  ">關於我們 ABOUT</h2>
-      <div class=" info px-5 py-3">
+      <div class=" info px-md-5 px-3 py-3">
         <p>在一個充滿色彩的夢幻工作室裡，一群熱愛藝術的調色師們，以世界各地的珍奇食材和天然色素為顏料，調配出色彩繽紛的飲品。每一杯飲品，都是一幅獨一無二的藝術作品，訴說著來自世界各地的故事。</p>
         <p>我們的靈感來自於大自然的多彩多姿。從熱帶雨林的鮮豔果實，到地中海的湛藍海水，再到北歐的澄澈湖泊，我們將這些美好的色彩濃縮在每一杯飲品中。同時，我們也從世界各地的傳統文化中汲取靈感，將異國風味融入我們的調色盤。</p>
         <p>我們相信，色彩不僅僅是一種視覺享受，更是一種情感的表達。每一個色彩都承載著不同的故事和情感，而我們的飲品，就是將這些故事和情感傳遞給您的媒介。</p>
@@ -96,38 +94,41 @@
   <section id="Services" class="row mt-5 position-relative">
     <div class="col-12">
       <h2 class="text-center  ">多元服務 Services</h2>
-      <div class=" info  px-5 py-3">
+      <div class="info px-md-5 px-3 py-3">
         <p>我們希望透過色彩繽紛的飲品，將世界的美好帶給每一個人，每款飲品都是一次味蕾的冒險，讓大家在忙碌的生活中，找到一份屬於自己的色彩，感受生活的美好。</p>
       </div>
     </div>
-    <div class="col-12 Services-main d-flex">
-      <div class="item mx-1">
-        <div class="item-info position-relative overflow-hidden">
+    <div class="col-12 Services-main d-flex flex-wrap">
+      <a class="item col-md-4 col-12" href="">
+        <div class="item-info position-relative overflow-hidden mx-lg-1 my-1">
           <div class="item-bg cover"></div>
           <img class="item-img img-fluid" src="access/images/author-item.jpg" alt="">
           <div class="item-text">
             精美的設計
+            <button type="button" class="btn btn-outline-light my-2">了解更多</button>
           </div>
         </div>
-      </div>
-      <div class="item mx-1">
-        <div class="item-info position-relative overflow-hidden">
+      </a>
+      <a class="item col-md-4 col-12" href="">
+        <div class="item-info position-relative overflow-hidden mx-lg-1 my-1">
           <div class="item-bg cover"></div>
           <img class="item-img img-fluid" src="access/images/author-item.jpg" alt="">
           <div class="item-text">
             精美的設計
+            <button type="button" class="btn btn-outline-light my-2">了解更多</button>
           </div>
         </div>
-      </div>
-      <div class="item mx-1">
-        <div class="item-info position-relative overflow-hidden">
+      </a>
+      <a class="item col-md-4 col-12" href="">
+        <div class="item-info position-relative overflow-hidden mx-lg-1 my-1">
           <div class="item-bg cover"></div>
           <img class="item-img img-fluid" src="access/images/author-item.jpg" alt="">
           <div class="item-text">
             精美的設計
+            <button type="button" class="btn btn-outline-light my-2">了解更多</button>
           </div>
         </div>
-      </div>
+      </a>
     </div>
   </section>
 
@@ -146,7 +147,11 @@
           </div>
           <div class="item-text">
             <p>選用天然食材，堅持健康、環保的理念，
-              將藝術融入生活，讓每一杯飲品都成為一件藝術品。</p>
+              將藝術融入生活，讓每一杯飲品都成為一件藝術品。
+            </p>
+            <div class="customer-name">
+              Tom
+            </div>
           </div>
         </div>
         <div class="item swiper-slide">
@@ -155,7 +160,11 @@
           </div>
           <div class="item-text">
             <p>選用天然食材，堅持健康、環保的理念，
-              將藝術融入生活，讓每一杯飲品都成為一件藝術品。</p>
+              將藝術融入生活，讓每一杯飲品都成為一件藝術品。
+            </p>
+            <div class="customer-name">
+              Tom
+            </div>
           </div>
         </div>
         <div class="item swiper-slide">
@@ -164,7 +173,11 @@
           </div>
           <div class="item-text">
             <p>選用天然食材，堅持健康、環保的理念，
-              將藝術融入生活，讓每一杯飲品都成為一件藝術品。</p>
+              將藝術融入生活，讓每一杯飲品都成為一件藝術品。
+            </p>
+            <div class="customer-name">
+              Tom
+            </div>
           </div>
         </div>
         <div class="item swiper-slide">
@@ -173,7 +186,11 @@
           </div>
           <div class="item-text">
             <p>選用天然食材，堅持健康、環保的理念，
-              將藝術融入生活，讓每一杯飲品都成為一件藝術品。</p>
+              將藝術融入生活，讓每一杯飲品都成為一件藝術品。
+            </p>
+            <div class="customer-name">
+              Tom
+            </div>
           </div>
         </div>
         <div class="item swiper-slide">
@@ -182,12 +199,16 @@
           </div>
           <div class="item-text">
             <p>選用天然食材，堅持健康、環保的理念，
-              將藝術融入生活，讓每一杯飲品都成為一件藝術品。</p>
+              將藝術融入生活，讓每一杯飲品都成為一件藝術品。
+            </p>
+            <div class="customer-name">
+              Tom
+            </div>
           </div>
         </div>
       </div>
-      <div class="swiper-button-prev swiper_Customers-button-prev"></div><!--左箭头。如果放置在swiper外面，需要自定义样式。-->
-      <div class="swiper-button-next swiper_Customers-button-next"></div><!--右箭头。如果放置在swiper外面，需要自定义样式。-->
+      <!-- <div class="swiper-button-prev swiper_Customers-button-prev"></div>
+      <div class="swiper-button-next swiper_Customers-button-next"></div> -->
     </div>
   </section>
 
@@ -338,11 +359,11 @@
   <section id="contact" class="row mt-5 mb-4 position-relative">
     <div class="row justify-content-center">
       <div class="col-12">
-        <h2 class="text-center mb-4">聯絡我們 contact</h2>
+        <h2 class="text-center mb-5">聯絡我們 contact</h2>
       </div>
-      <div class="col-6 justify-self-end">
+      <div class="col-md-6 col-12 justify-self-end">
         <div>
-          <h3>聯絡方式</h3>
+          <h3 class="text-md-center">聯絡方式</h3>
           <p>以下是我們的聯絡方式：</p>
         </div>
         <div class="d-flex align-items-end flex-wrap">
@@ -364,8 +385,8 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-      <div class="col-6">
-        <h3>有疑慮嗎?</h3>
+      <div class="col-md-6 col-12 mt-md-0 mt-5">
+        <h3 class="text-md-center">有疑慮嗎?</h3>
         <p>請用下面的表格與我們聯繫。</p>
         <div>
           <div class="mb-3">
@@ -397,20 +418,20 @@
       </div>
     </div>
   </section>
-  <section id="e-newsletter" class="row">
-    <div class="infoBox">
-      <div class="col-6">
+  <section id="e-newsletter" class="row mt-md-0 mt-5 py-3">
+    <div class="infoBox d-flex flex-wrap">
+      <div class="col-md-6 col-12">
         <h3 class="fw-bold">訂閱我們的電子報</h3>
         <p>獲取優惠資訊</p>
       </div>
-      <div class="col-6">
+      <div class="col-md-6 col-12">
         <div class="input-group">
           <input type="email" class="form-control" id="email" placeholder="name@example.com">
           <button class="btn btn-dark" type="button">提交</button>
         </div>
       </div>
     </div>
-    <img src="https://fakeimg.pl/1900x200/ccc/" class="img-fluid p-0">
+    <!-- <img src="https://fakeimg.pl/1900x200/ccc/" class="img-fluid p-0"> -->
     <!-- <div class="jarallax">
     </div> -->
   </section>
@@ -485,7 +506,7 @@
   <script src="https://unpkg.com/gsap/dist/Observer.min.js"></script>
 
   <!-- <script type="text/javascript" src="access/js/plugins.js"></script> -->
-  <script src="access/js/main.js?v=002"></script>
+  <script src="access/js/main.js?v=003"></script>
 </body>
 
 </html>
