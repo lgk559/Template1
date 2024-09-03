@@ -87,7 +87,7 @@
         const Customers_swiper = new Swiper('.Customers-swiper', {
             // loop: true,
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 30,
             freeMode: true,
             centeredSlides: false,
             loop: true,
