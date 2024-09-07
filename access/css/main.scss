@@ -112,7 +112,7 @@
 
   // 商品輪播
   .box {
-    width: 100%;
+    width: 80%;
     height: 50vw;
     max-height: 600px;
     max-width: 1200px;
@@ -123,63 +123,52 @@
       max-height: unset;
       height: 150vw;
     }
+    
 }
 .swiper {
-    
+  user-select: none;
     width: 100%;
     height: 100%;
 }
 .sub_Swiper {
     .txtBox {
         // border: 1px solid #000;
-        width: 40%;
+        width: 20%;
         position: relative;
         top: 20%;
-        left: 0%;
-        transition: all 0.25s 0.2s !important;
+        left: 70%;
+        transition: opacity 0.25s 0.2s !important;
         opacity: 0;
-        color: #fff;
+        color: #000;
+        
         @media only screen and (max-width: 991px) {
           top: 7%;
           width: 80%;
         }
     }
-    .bg, .bg div{
-        width: 100%;
+    .bg{
+        width: 66%;
         height: 100%;
+        div {
+          width: 100%;
+          height: 100%;
+        }
     }
     .bg {
         position: absolute;
         top: 0;
         left: 0;
         div {
+          background-size: cover;
+          background-position: center;
             // clip-path: circle(0% at 100% 100%);
             // clip-path: circle(0% at 50% -50%);
-            clip-path: xywh(50% 50% 0% 10% round 2rem 2rem);
-            transition: clip-path 0.8s 0.1s !important;
-            @media only screen and (max-width: 991px) {
-              clip-path: xywh(0% 5% 95% 70% round 2rem 2rem);
-            }
+            // clip-path: xywh(50% 50% 0% 10% round 2rem 2rem);
+            // transition: clip-path 0.8s 0.1s !important;
+            // @media only screen and (max-width: 991px) {
+            //   clip-path: xywh(0% 5% 95% 70% round 2rem 2rem);
+            // }
         }
-    }
-    .cover {
-      width: 50%;
-      position: relative;
-      z-index: 0;
-      /* bottom: 0; */
-      top: -5%;
-      left: 35%;
-      opacity: 1;
-      @media only screen and (max-width: 991px) {
-        top: unset;
-        bottom: 10%;
-        position: absolute;
-        width: 55%;
-        left: 2%;
-      }
-      img {
-        width: 100%;
-      }
     }
     .swiper-slide{
         // background-color: #ccc;
@@ -188,16 +177,16 @@
         .bg {
             div {
                 // clip-path: circle(100% at 50% 50%);
-                clip-path: xywh(0% 0% 100% 98% round 2rem 2rem);
+                // clip-path: xywh(0% 0% 100% 98% round 2rem 2rem);
                 
-                @media only screen and (max-width: 991px) {
-                  // clip-path: unset;
-                  clip-path: xywh(5% 0% 90% 100% round 2rem 2rem);
-                }
+                // @media only screen and (max-width: 991px) {
+                //   // clip-path: unset;
+                //   clip-path: xywh(5% 0% 90% 100% round 2rem 2rem);
+                // }
             }
         }
         .txtBox {
-            left: 10%;
+            // left: 10%;
             opacity: 1;
             
         }
@@ -210,14 +199,16 @@
 }
 .max_Swiper {
     position: absolute !important;
-    max-width: 60%;
-    width: auto;
-    height: 95%;
-    top: 10%;
+    // max-width: 60%;
+    width: 66%;
+    // height: 100%;
+    top: 50%;
     /* max-height: 500px; */
     /* left: 64%; */
-    right: 0%;
-    /* transform: translate(-50%,-50%); */
+    left: 0%;
+    transform: translate(0%, -50%);
+    overflow: hidden;
+    border: 1px solid #000;
     @media only screen and (max-width: 991px) {
       max-width: 100%;
       height: 75%;
@@ -229,14 +220,33 @@
         background-image: unset !important;
     }
     img {
-        // max-width: 100%;
         opacity: 0;
         width: auto;
         height: 100%;
-        // transform: translateZ(0) translateX(-50%);
-        // transition: transform 1s 0s !important;
+        transform: translateZ(0) translateX(80%);
+        transition: transform 1s 0.25s !important;
+        user-select: none;
     }
-    
+    .cover {
+      width: 40%;
+      position: absolute;
+      z-index: 0;
+      /* bottom: 0; */
+      top: 80%;
+      left: 58%;
+      opacity: 1;
+      transform: translate(-50%, -50%);
+      @media only screen and (max-width: 991px) {
+        top: unset;
+        bottom: 10%;
+        position: absolute;
+        width: 55%;
+        left: 2%;
+      }
+      img {
+        width: 100%;
+      }
+    }
     .swiper-slide-next {
         img {
             opacity: 1;
@@ -245,7 +255,7 @@
     .swiper-slide-active {
         img {
             opacity: 1;
-            // transform: translateZ(0) translateX(0%);
+            transform: translateZ(0) translateX(20%);
         }
     }
 

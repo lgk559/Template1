@@ -6,26 +6,27 @@
         const swiper2 = new Swiper('.max_Swiper', {
             // Optional parameters
             // direction: 'vertical',
-            loop: true,
-            effect: 'coverflow',
+            loop: false,
+            // effect: 'coverflow',
             slidesPerView: 1,
             spaceBetween: 0,
-            centeredSlides: true,
-            watchSlidesVisibility: true,
-            grabCursor: true,
-            breakpoints: {
-                991: {
-                    slidesPerView: 1.8,
-                    spaceBetween: 0
-                },
-            },
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 200,
-                modifier: 1,
-                slideShadows: true,
-            },
+            // watchSlidesVisibility: true,
+            // grabCursor: true,
+            // breakpoints: {
+            //     991: {
+            //         slidesPerView: 1.8,
+            //         spaceBetween: 0
+            //     },
+            // },
+            // coverflowEffect: {
+            //     rotate: 0,
+            //     stretch: 0,
+            //     depth: 200,
+            //     modifier: 1,
+            //     slideShadows: true,
+            // },
+            noSwiping: true,
+            
             navigation: {
                 nextEl: '.swiper_index-button-next',
                 prevEl: '.swiper_index-button-prev',
@@ -38,6 +39,9 @@
                     watchSlidesVisibility: true,/*避免出现bug*/
                     noSwiping: true,
                     // centeredSlides: true,
+                    fadeEffect: {
+                        crossFade: true,
+                    },
                 },
             },
             // creativeEffect: {
