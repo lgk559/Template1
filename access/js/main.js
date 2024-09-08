@@ -4,27 +4,9 @@
 
     $(document).ready(function () {
         const swiper2 = new Swiper('.max_Swiper', {
-            // Optional parameters
-            // direction: 'vertical',
             loop: false,
-            // effect: 'coverflow',
             slidesPerView: 1,
             spaceBetween: 0,
-            // watchSlidesVisibility: true,
-            // grabCursor: true,
-            // breakpoints: {
-            //     991: {
-            //         slidesPerView: 1.8,
-            //         spaceBetween: 0
-            //     },
-            // },
-            // coverflowEffect: {
-            //     rotate: 0,
-            //     stretch: 0,
-            //     depth: 200,
-            //     modifier: 1,
-            //     slideShadows: true,
-            // },
             noSwiping: true,
             
             navigation: {
@@ -44,15 +26,6 @@
                     },
                 },
             },
-            // creativeEffect: {
-            //     prev: {
-            //     //   shadow: true,
-            //       translate: ["-10%", 0, -1],
-            //     },
-            //     next: {
-            //       translate: ["100%", 0, 0],
-            //     },
-            // },
         });
 
         const news = new Swiper('.news_Swiper', {
@@ -79,7 +52,7 @@
         const kv_Swiper = new Swiper('.kv_Swiper', {
             loop: true,
             direction: 'vertical',
-            autoplay: true,
+            autoplay: false,
             mousewheel: true,
             pagination: {
                 el: ".kv_Swiper .swiper-pagination",
@@ -95,15 +68,6 @@
             freeMode: true,
             centeredSlides: false,
             loop: true,
-            // navigation: {
-            //     nextEl: '.swiper_Customers-button-next',
-            //     prevEl: '.swiper_Customers-button-prev',
-            // },
-            // pagination: {
-            //     el: ".kv_Swiper .swiper-pagination",
-            //     dynamicBullets: false,
-            //     clickable: true,
-            // },
             breakpoints: {
                 
                 991: {
@@ -119,6 +83,8 @@
             }
         })
 
+        
+        
         // init jarallax parallax
         var initJarallax = function () {
             jarallax(document.querySelectorAll(".jarallax"));
@@ -127,10 +93,25 @@
             });
         }
         initJarallax();
-
+        
         // init gasp
         setTimeout(function () { 
             gsap.registerPlugin(ScrollTrigger);
+            // header
+            gsap.to("#header", {
+                duration: 1,
+                scrollTrigger: {  
+                trigger: '#kv',
+                markers: false,
+                start: "top bottom", 
+                end: "bottom top",
+                onEnter: () => { $("#header").removeClass('scroll') },
+                onEnterBack: () => { $("#header").removeClass('scroll') },
+                onLeave: () => { $("#header").addClass('scroll') },
+                onLeaveBack: () => { $("#header").addClass('scroll') },
+            }          
+            });
+
             gsap.utils.toArray(".item-bg").forEach((item, i) => {
                 gsap.to(item, {
                     left: "120%",
