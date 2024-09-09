@@ -28,27 +28,6 @@
             },
         });
 
-        const news = new Swiper('.news_Swiper', {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            // loop: true,
-            navigation: {
-                nextEl: '.swiper_news-button-next',
-                prevEl: '.swiper_news-button-prev',
-            },
-            pagination: {
-                el: ".news_Swiper .swiper-pagination",
-                dynamicBullets: true,
-                clickable: true,
-            },
-            breakpoints: {
-                991: {
-                    slidesPerView: 3,
-                    spaceBetween: 10
-                },
-            }
-        })
-
         const kv_Swiper = new Swiper('.kv_Swiper', {
             loop: true,
             direction: 'vertical',
@@ -62,12 +41,15 @@
         })
 
         const Customers_swiper = new Swiper('.Customers-swiper', {
-            // loop: true,
+            loop: true,
             slidesPerView: 1,
             spaceBetween: 30,
             freeMode: true,
             centeredSlides: false,
-            loop: true,
+            // allowTouchMove: true,
+            // autoplay : {
+            //     delay: 5000
+            // },
             breakpoints: {
                 
                 991: {
@@ -75,7 +57,7 @@
                     spaceBetween: 10,
                     centeredSlides: true,
                 },
-                576: {
+                768: {
                     slidesPerView: 1.5,
                     spaceBetween: 10,
                     centeredSlides: true,
@@ -118,7 +100,7 @@
                     duration: 2,
                     ease: "slow(0.1,0.4,false)",
                     scrollTrigger: {  
-                    trigger: '.Services-main',
+                    trigger: item,
                     markers: false,
                     start: "top bottom", 
                     end: "bottom top",

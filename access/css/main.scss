@@ -73,7 +73,7 @@
       .nav-link {
         color: #ffffff;
         @media only screen and (max-width: 768px) {
-          color: #000;
+          color: #ffffff;
         }
         &:hover,&.active {
           font-weight: 600;
@@ -86,6 +86,9 @@
         background-color: #fff;
         .nav-link,.navbar-toggler {
           color: #000;
+          &:hover,&.active {
+            color: #ff0066;
+          }
         }
         .navbar-brand {
           background-image: url(/access/images/logo_drank.png);
@@ -93,7 +96,25 @@
       }
 }
  
-
+// footer
+footer {
+  position: relative;
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      color: #ff0066;
+    }
+  }
+  .logo {
+    height: 3rem;
+  }
+  .footer-menu {
+    @media only screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+}
   
   .offcanvas.show .nav-item a.nav-link {
     font-size: 2em;
@@ -115,7 +136,7 @@
     }
   }
 
-  // 共通--標題字
+  // 共通--標題字 //
   .section-title{
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
@@ -125,6 +146,10 @@
       font-weight: 400;
     }
   }
+  .s-block {
+    position: absolute;
+  }
+  /////////////////
   .kv {
     .title {
       font-family: "Noto Sans TC", sans-serif;
@@ -133,21 +158,18 @@
       font-style: normal;
       font-size: 3vw;
       line-height: 1.4;
-      text-shadow: 2px 3px 10px #666;
       @media only screen and (max-width: 768px) {
         font-size: 4.5vw;
       }
     }
     .subTitle {
       font-size: 1.6vw;
-      text-shadow: 2px 3px 10px #666;
       @media only screen and (max-width: 768px) {
         font-size: 2.2vw;
       }
     }
     .info {
       font-size: 1vw;
-      text-shadow: 2px 3px 10px #666;
       @media only screen and (max-width: 768px) {
         font-size: 2.2vw;
       }
@@ -157,178 +179,171 @@
     font-family: "Microsoft JhengHei","微軟正黑體",sans-serif,arial,;
   }
 
-
-
-
-  // 新聞輪播
-  .news_Swiper {
-    width: 100%;
-    height: 50vw;
-    max-height: 600px;
-    max-width: 1200px;
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
-    cursor: pointer;
-    .news-img {
-      overflow: hidden;
-    }
-    .card:hover img{
-      transform: scale(1.1);
-      transition: transform 0.5s;
-    }
+  .text-shadow {
+    text-shadow: 2px 3px 10px #666;
   }
 
+
   // 商品輪播
-  .box {
-    width: 80%;
-    height: 50vw;
-    max-height: 600px;
-    max-width: 1200px;
+  #Featured {
     position: relative;
-    overflow: hidden;
-    margin: 0 auto;
-    @media only screen and (max-width: 768px) {
-      max-height: unset;
-      height: 150vw;
+    .section-title {
+      position: absolute;
+      top: 5.5%;
+      left: 66%;
+      transform: translate(-50%, -50%);
     }
-    
-}
-.swiper {
-  user-select: none;
-    width: 100%;
-    height: 100%;
-}
-.sub_Swiper {
-    .txtBox {
-        // border: 1px solid #000;
-        width: 20%;
-        position: relative;
-        top: 20%;
-        left: 70%;
-        transition: opacity 0.25s 0.2s !important;
-        opacity: 0;
-        color: #000;
-        
-        @media only screen and (max-width: 768px) {
-          top: 7%;
-          width: 80%;
-        }
+    .box {
+      width: 80%;
+      height: 50vw;
+      max-height: 600px;
+      max-width: 1200px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto;
+      @media only screen and (max-width: 768px) {
+        max-height: unset;
+        height: 150vw;
+      }
+      
+      
     }
-    .bg{
-        width: 66%;
+    .swiper {
+      user-select: none;
+        width: 100%;
         height: 100%;
-        div {
-          width: 100%;
-          height: 100%;
+    }
+    .sub_Swiper {
+        .txtBox {
+            // border: 1px solid #000;
+            width: 20%;
+            position: relative;
+            top: 20%;
+            left: 70%;
+            transition: opacity 0.25s 0.2s !important;
+            opacity: 0;
+            color: #000;
+            
+            @media only screen and (max-width: 768px) {
+              top: 7%;
+              width: 80%;
+            }
         }
-    }
-    .bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        div {
-          background-size: cover;
-          background-position: center;
-            // clip-path: circle(0% at 100% 100%);
-            // clip-path: circle(0% at 50% -50%);
-            // clip-path: xywh(50% 50% 0% 10% round 2rem 2rem);
-            // transition: clip-path 0.8s 0.1s !important;
-            // @media only screen and (max-width: 768px) {
-            //   clip-path: xywh(0% 5% 95% 70% round 2rem 2rem);
-            // }
-        }
-    }
-    .swiper-slide{
-        // background-color: #ccc;
-    }
-    .swiper-slide-active {
-        .bg {
+        .bg{
+            width: 66%;
+            height: 100%;
             div {
-                // clip-path: circle(100% at 50% 50%);
-                // clip-path: xywh(0% 0% 100% 98% round 2rem 2rem);
-                
+              width: 100%;
+              height: 100%;
+            }
+        }
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            div {
+              background-size: cover;
+              background-position: center;
+                // clip-path: circle(0% at 100% 100%);
+                // clip-path: circle(0% at 50% -50%);
+                // clip-path: xywh(50% 50% 0% 10% round 2rem 2rem);
+                // transition: clip-path 0.8s 0.1s !important;
                 // @media only screen and (max-width: 768px) {
-                //   // clip-path: unset;
-                //   clip-path: xywh(5% 0% 90% 100% round 2rem 2rem);
+                //   clip-path: xywh(0% 5% 95% 70% round 2rem 2rem);
                 // }
             }
         }
-        .txtBox {
-            // left: 10%;
-            opacity: 1;
+        .swiper-slide{
+            // background-color: #ccc;
+        }
+        .swiper-slide-active {
+            .bg {
+                div {
+                    // clip-path: circle(100% at 50% 50%);
+                    // clip-path: xywh(0% 0% 100% 98% round 2rem 2rem);
+                    
+                    // @media only screen and (max-width: 768px) {
+                    //   // clip-path: unset;
+                    //   clip-path: xywh(5% 0% 90% 100% round 2rem 2rem);
+                    // }
+                }
+            }
+            .txtBox {
+                // left: 10%;
+                opacity: 1;
+                
+            }
+            // .title {
+            //   font-weight: 600;
+            //   font-size: 1.2rem;
+            // }
             
         }
-        // .title {
-        //   font-weight: 600;
-        //   font-size: 1.2rem;
-        // }
-        
     }
-}
-.max_Swiper {
-    position: absolute !important;
-    // max-width: 60%;
-    width: 66%;
-    // height: 100%;
-    top: 50%;
-    /* max-height: 500px; */
-    /* left: 64%; */
-    left: 0%;
-    transform: translate(0%, -50%);
-    overflow: hidden;
-    border: 1px solid #000;
-    @media only screen and (max-width: 768px) {
-      max-width: 100%;
-      height: 75%;
-      top: unset;
-      bottom: 0;
-      right: -3%;
-    }
-    &.swiper-3d .swiper-slide-shadow-right,&.swiper-3d .swiper-slide-shadow-left {
-        background-image: unset !important;
-    }
-    img {
-        opacity: 0;
-        width: auto;
-        height: 100%;
-        transform: translateZ(0) translateX(80%);
-        transition: transform 1s 0.25s !important;
-        user-select: none;
-    }
-    .cover {
-      width: 40%;
-      position: absolute;
-      z-index: 0;
-      /* bottom: 0; */
-      top: 80%;
-      left: 58%;
-      opacity: 1;
-      transform: translate(-50%, -50%);
-      @media only screen and (max-width: 768px) {
-        top: unset;
-        bottom: 10%;
-        position: absolute;
-        width: 55%;
-        left: 2%;
-      }
-      img {
-        width: 100%;
-      }
-    }
-    .swiper-slide-next {
-        img {
-            opacity: 1;
+    .max_Swiper {
+        position: absolute !important;
+        // max-width: 60%;
+        width: 66%;
+        // height: 100%;
+        top: 50%;
+        /* max-height: 500px; */
+        /* left: 64%; */
+        left: 0%;
+        transform: translate(0%, -50%);
+        overflow: hidden;
+        border: 1px solid #000;
+        @media only screen and (max-width: 768px) {
+          max-width: 100%;
+          height: 75%;
+          top: unset;
+          bottom: 0;
+          right: -3%;
         }
-    }
-    .swiper-slide-active {
-        img {
-            opacity: 1;
-            transform: translateZ(0) translateX(20%);
+        &.swiper-3d .swiper-slide-shadow-right,&.swiper-3d .swiper-slide-shadow-left {
+            background-image: unset !important;
         }
+        img {
+            opacity: 0;
+            width: auto;
+            height: 100%;
+            transform: translateZ(0) translateX(80%);
+            transition: transform 1s 0.25s !important;
+            user-select: none;
+        }
+        .cover {
+          width: 40%;
+          position: absolute;
+          z-index: 0;
+          /* bottom: 0; */
+          top: 80%;
+          left: 58%;
+          opacity: 1;
+          transform: translate(-50%, -50%);
+          @media only screen and (max-width: 768px) {
+            top: unset;
+            bottom: 10%;
+            position: absolute;
+            width: 55%;
+            left: 2%;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .swiper-slide-next {
+            img {
+                opacity: 1;
+            }
+        }
+        .swiper-slide-active {
+            img {
+                opacity: 1;
+                transform: translateZ(0) translateX(20%);
+            }
+        }
+  
     }
-
-}
+  }
 
 // kv輪播
 .kv_Swiper {
@@ -362,13 +377,6 @@
   }
 }
 
-footer {
-  position: relative;
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-}
 
 // jarallax
 .jarallax {
@@ -380,16 +388,24 @@ footer {
 // 關於我們 ABOUT
 #about {
   .info {
-    width: 55%;
-    max-width: 700px;
     margin: 0 auto;
-    @media only screen and (max-width: 768px) {
-      width: 100%;
-    }
   }
   .jarallax-img {
     width: 100%;
     object-fit: cover;
+  }
+  .cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .btn {
+    background: rgba(255, 255, 255, 0.2);
+    &:hover {
+      color: #fff;
+      font-weight: 600;
+    }
   }
 }
 
@@ -397,15 +413,11 @@ footer {
 // 多元服務 Services
 #Services {
   position: relative;
-  width: 80%;
   margin: 0 auto;
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-  }
   // .item {
   //   width: 100%;
   // }
-  .item:hover .item-img {
+  .item .item-img:hover {
     transform: scale(1.1);
     transition: transform 0.5s;
   }
@@ -415,6 +427,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
  
   }
   .item-bg {
@@ -428,16 +441,24 @@ footer {
     left: 50%;
     transform: translate(-50%,-50%);
     color: #ebebeb;
-    border: 1px solid #fff;
-    width: 90%;
-    height: 90%;
-    padding: 0 5%;
+    // border: 1px solid #fff;
+    // width: 90%;
+    // height: 90%;
+    // padding: 0 5%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: self-start;
-    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+    // pointer-events: none;
+    z-index: 1;
+  }
+  .btn {
+    background: rgba(255, 255, 255, 0.2);
+    &:hover {
+      color: #fff;
+      font-weight: 600;
+    }
   }
 }
 // 客戶評價 Customers
@@ -464,7 +485,7 @@ footer {
     margin-right: 3%;
     
     img{
-      width: 4rem;
+      width: 7rem;
       height: auto;
       border-radius: 50%;
       border: 1px solid;
@@ -473,16 +494,22 @@ footer {
     }
   }
   .item-text {
+    position: relative;
     // max-width: 50%;
-    width: 100%;
+    width: auto;
     // flex: 0 0 50%;
     display: flex;
-    align-items: center;
+    align-items: start;
     pointer-events: none;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    user-select: none;
   }
   .customer-name {
+    position: relative;
+    left: 40%;
+    transform: translate(-50%);
     &::before {
       position: relative;
       content: "---";
@@ -520,6 +547,10 @@ footer {
     width: 100%;
     margin: 0 auto;
     display: block;
+    &:hover {
+      color: #fff;
+      font-weight: 600;
+    }
   }
 }
 
@@ -532,7 +563,9 @@ iframe {
 // e-newsletter
 #e-newsletter {
   position: relative;
-  background-color: #ccc;
+  background-image: url(/access/images/banner-bg_02.jpg);
+  background-size: cover;
+  background-position: center left;
   .infoBox {
     // position: absolute;
     // top: 50%;
@@ -544,5 +577,31 @@ iframe {
     justify-content: center;
     align-items: center;
     z-index: 1;
+    input {
+      background-color: unset;
+      border: 0;
+      border-bottom: 1px solid;
+      color: #fff;
+      height: 2.8rem;
+    }
+    .btn {
+      position: absolute;
+      right: 0%;
+      top: -5%;
+      border-radius: 50%;
+      padding: 1.5% 3%;
+      &:hover {
+        color: inherit;
+        font-weight: 600;
+      }
+    }
+    ::placeholder {
+      color: #fff;
+      opacity: 1; /* Firefox */
+    }
+    
+    ::-ms-input-placeholder { /* Edge 12 -18 */
+      color: #fff;
+    }
   }
 }

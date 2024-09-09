@@ -87,7 +87,7 @@
 }
 @media only screen and (max-width: 768px) {
   #header .nav-link {
-    color: #000;
+    color: #ffffff;
   }
 }
 #header .nav-link:hover, #header .nav-link.active {
@@ -102,8 +102,30 @@
 #header.scroll .nav-link, #header.scroll .navbar-toggler {
   color: #000;
 }
+#header.scroll .nav-link:hover, #header.scroll .nav-link.active, #header.scroll .navbar-toggler:hover, #header.scroll .navbar-toggler.active {
+  color: #ff0066;
+}
 #header.scroll .navbar-brand {
   background-image: url(/access/images/logo_drank.png);
+}
+
+footer {
+  position: relative;
+}
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #ff0066;
+}
+footer .logo {
+  height: 3rem;
+}
+@media only screen and (max-width: 768px) {
+  footer .footer-menu {
+    text-align: center;
+  }
 }
 
 .offcanvas.show .nav-item a.nav-link {
@@ -135,6 +157,10 @@
   font-weight: 400;
 }
 
+.s-block {
+  position: absolute;
+}
+
 .kv .title {
   font-family: "Noto Sans TC", sans-serif;
   font-optical-sizing: auto;
@@ -142,7 +168,6 @@
   font-style: normal;
   font-size: 3vw;
   line-height: 1.4;
-  text-shadow: 2px 3px 10px #666;
 }
 @media only screen and (max-width: 768px) {
   .kv .title {
@@ -151,7 +176,6 @@
 }
 .kv .subTitle {
   font-size: 1.6vw;
-  text-shadow: 2px 3px 10px #666;
 }
 @media only screen and (max-width: 768px) {
   .kv .subTitle {
@@ -160,7 +184,6 @@
 }
 .kv .info {
   font-size: 1vw;
-  text-shadow: 2px 3px 10px #666;
 }
 @media only screen and (max-width: 768px) {
   .kv .info {
@@ -172,25 +195,20 @@
   font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif, arial;
 }
 
-.news_Swiper {
-  width: 100%;
-  height: 50vw;
-  max-height: 600px;
-  max-width: 1200px;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-  cursor: pointer;
-}
-.news_Swiper .news-img {
-  overflow: hidden;
-}
-.news_Swiper .card:hover img {
-  transform: scale(1.1);
-  transition: transform 0.5s;
+.text-shadow {
+  text-shadow: 2px 3px 10px #666;
 }
 
-.box {
+#Featured {
+  position: relative;
+}
+#Featured .section-title {
+  position: absolute;
+  top: 5.5%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+}
+#Featured .box {
   width: 80%;
   height: 50vw;
   max-height: 600px;
@@ -200,21 +218,19 @@
   margin: 0 auto;
 }
 @media only screen and (max-width: 768px) {
-  .box {
+  #Featured .box {
     max-height: unset;
     height: 150vw;
   }
 }
-
-.swiper {
+#Featured .swiper {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   width: 100%;
   height: 100%;
 }
-
-.sub_Swiper .txtBox {
+#Featured .sub_Swiper .txtBox {
   width: 20%;
   position: relative;
   top: 20%;
@@ -224,33 +240,32 @@
   color: #000;
 }
 @media only screen and (max-width: 768px) {
-  .sub_Swiper .txtBox {
+  #Featured .sub_Swiper .txtBox {
     top: 7%;
     width: 80%;
   }
 }
-.sub_Swiper .bg {
+#Featured .sub_Swiper .bg {
   width: 66%;
   height: 100%;
 }
-.sub_Swiper .bg div {
+#Featured .sub_Swiper .bg div {
   width: 100%;
   height: 100%;
 }
-.sub_Swiper .bg {
+#Featured .sub_Swiper .bg {
   position: absolute;
   top: 0;
   left: 0;
 }
-.sub_Swiper .bg div {
+#Featured .sub_Swiper .bg div {
   background-size: cover;
   background-position: center;
 }
-.sub_Swiper .swiper-slide-active .txtBox {
+#Featured .sub_Swiper .swiper-slide-active .txtBox {
   opacity: 1;
 }
-
-.max_Swiper {
+#Featured .max_Swiper {
   position: absolute !important;
   width: 66%;
   top: 50%;
@@ -262,7 +277,7 @@
   border: 1px solid #000;
 }
 @media only screen and (max-width: 768px) {
-  .max_Swiper {
+  #Featured .max_Swiper {
     max-width: 100%;
     height: 75%;
     top: unset;
@@ -270,10 +285,10 @@
     right: -3%;
   }
 }
-.max_Swiper.swiper-3d .swiper-slide-shadow-right, .max_Swiper.swiper-3d .swiper-slide-shadow-left {
+#Featured .max_Swiper.swiper-3d .swiper-slide-shadow-right, #Featured .max_Swiper.swiper-3d .swiper-slide-shadow-left {
   background-image: unset !important;
 }
-.max_Swiper img {
+#Featured .max_Swiper img {
   opacity: 0;
   width: auto;
   height: 100%;
@@ -283,7 +298,7 @@
      -moz-user-select: none;
           user-select: none;
 }
-.max_Swiper .cover {
+#Featured .max_Swiper .cover {
   width: 40%;
   position: absolute;
   z-index: 0;
@@ -294,7 +309,7 @@
   transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 768px) {
-  .max_Swiper .cover {
+  #Featured .max_Swiper .cover {
     top: unset;
     bottom: 10%;
     position: absolute;
@@ -302,13 +317,13 @@
     left: 2%;
   }
 }
-.max_Swiper .cover img {
+#Featured .max_Swiper .cover img {
   width: 100%;
 }
-.max_Swiper .swiper-slide-next img {
+#Featured .max_Swiper .swiper-slide-next img {
   opacity: 1;
 }
-.max_Swiper .swiper-slide-active img {
+#Featured .max_Swiper .swiper-slide-active img {
   opacity: 1;
   transform: translateZ(0) translateX(20%);
 }
@@ -347,14 +362,6 @@
   color: #fff;
 }
 
-footer {
-  position: relative;
-}
-footer a {
-  color: inherit;
-  text-decoration: none;
-}
-
 .jarallax {
   position: relative;
   z-index: 0;
@@ -362,32 +369,32 @@ footer a {
 }
 
 #about .info {
-  width: 55%;
-  max-width: 700px;
   margin: 0 auto;
-}
-@media only screen and (max-width: 768px) {
-  #about .info {
-    width: 100%;
-  }
 }
 #about .jarallax-img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
+#about .cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#about .btn {
+  background: rgba(255, 255, 255, 0.2);
+}
+#about .btn:hover {
+  color: #fff;
+  font-weight: 600;
+}
 
 #Services {
   position: relative;
-  width: 80%;
   margin: 0 auto;
 }
-@media only screen and (max-width: 768px) {
-  #Services {
-    width: 100%;
-  }
-}
-#Services .item:hover .item-img {
+#Services .item .item-img:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
 }
@@ -397,6 +404,7 @@ footer a {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 #Services .item-bg {
   left: 0%;
@@ -408,16 +416,19 @@ footer a {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ebebeb;
-  border: 1px solid #fff;
-  width: 90%;
-  height: 90%;
-  padding: 0 5%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: self-start;
-  pointer-events: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+#Services .btn {
+  background: rgba(255, 255, 255, 0.2);
+}
+#Services .btn:hover {
+  color: #fff;
+  font-weight: 600;
 }
 
 #Customers {
@@ -439,7 +450,7 @@ footer a {
   margin-right: 3%;
 }
 #Customers .item-img img {
-  width: 4rem;
+  width: 7rem;
   height: auto;
   border-radius: 50%;
   border: 1px solid;
@@ -449,12 +460,22 @@ footer a {
      object-position: center;
 }
 #Customers .item-text {
-  width: 100%;
+  position: relative;
+  width: auto;
   display: flex;
-  align-items: center;
+  align-items: start;
   pointer-events: none;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+#Customers .customer-name {
+  position: relative;
+  left: 40%;
+  transform: translate(-50%);
 }
 #Customers .customer-name::before {
   position: relative;
@@ -494,6 +515,10 @@ footer a {
   margin: 0 auto;
   display: block;
 }
+#contact .btn:hover {
+  color: #fff;
+  font-weight: 600;
+}
 
 iframe {
   width: 100%;
@@ -503,7 +528,9 @@ iframe {
 
 #e-newsletter {
   position: relative;
-  background-color: #ccc;
+  background-image: url(/access/images/banner-bg_02.jpg);
+  background-size: cover;
+  background-position: center left;
 }
 #e-newsletter .infoBox {
   width: 70%;
@@ -512,4 +539,33 @@ iframe {
   justify-content: center;
   align-items: center;
   z-index: 1;
+}
+#e-newsletter .infoBox input {
+  background-color: unset;
+  border: 0;
+  border-bottom: 1px solid;
+  color: #fff;
+  height: 2.8rem;
+}
+#e-newsletter .infoBox .btn {
+  position: absolute;
+  right: 0%;
+  top: -5%;
+  border-radius: 50%;
+  padding: 1.5% 3%;
+}
+#e-newsletter .infoBox .btn:hover {
+  color: inherit;
+  font-weight: 600;
+}
+#e-newsletter .infoBox ::-moz-placeholder {
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+#e-newsletter .infoBox ::placeholder {
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+#e-newsletter .infoBox ::-ms-input-placeholder { /* Edge 12 -18 */
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
