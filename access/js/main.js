@@ -111,7 +111,7 @@
 
             gsap.utils.toArray(".js-scroll-item").forEach(item => {
                 let href = item.getAttribute("href")
-                console.log(item,href)
+                // console.log(item,href)
                 // let menuDom = $(item).parent().parent().parent()
                 // console.log(menuDom)
                 let offset = item.getAttribute("data-offset") ? item.getAttribute("data-offset") : 0
