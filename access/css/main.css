@@ -23,8 +23,8 @@
   --bs-light: #fff;
   --bs-dark: #000;
   --navbar-color-color: #131814;
-  --swiper-theme-color: #787d62 !important;
-  --swiper-pagination-color: #787d62 !important;
+  --swiper-theme-color: #fff !important;
+  --swiper-pagination-color: #000 !important;
 }
 
 /* 1. Header
@@ -99,10 +99,13 @@
 #header.scroll {
   background-color: #fff;
 }
-#header.scroll .nav-link, #header.scroll .navbar-toggler {
+#header.scroll .nav-link,
+#header.scroll .navbar-toggler {
   color: #000;
 }
-#header.scroll .nav-link:hover, #header.scroll .nav-link.active, #header.scroll .navbar-toggler:hover, #header.scroll .navbar-toggler.active {
+#header.scroll .nav-link:hover, #header.scroll .nav-link.active,
+#header.scroll .navbar-toggler:hover,
+#header.scroll .navbar-toggler.active {
   color: #ff0066;
 }
 #header.scroll .navbar-brand {
@@ -203,15 +206,15 @@ footer .logo {
   position: relative;
 }
 #Featured .section-title {
-  position: absolute;
-  top: 5.5%;
-  left: 66%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  padding-top: 5.5%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #Featured .box {
-  width: 80%;
-  height: 50vw;
-  max-height: 600px;
+  width: 70%;
+  height: 40vw;
+  max-height: 700px;
   max-width: 1200px;
   position: relative;
   overflow: hidden;
@@ -233,11 +236,12 @@ footer .logo {
 #Featured .sub_Swiper .txtBox {
   width: 20%;
   position: relative;
-  top: 20%;
+  top: 50%;
   left: 70%;
   transition: opacity 0.25s 0.2s !important;
   opacity: 0;
   color: #000;
+  transform: translateY(-50%);
 }
 @media only screen and (max-width: 768px) {
   #Featured .sub_Swiper .txtBox {
@@ -246,7 +250,7 @@ footer .logo {
   }
 }
 #Featured .sub_Swiper .bg {
-  width: 66%;
+  width: 60%;
   height: 100%;
 }
 #Featured .sub_Swiper .bg div {
@@ -259,11 +263,29 @@ footer .logo {
   left: 0;
 }
 #Featured .sub_Swiper .bg div {
-  background-size: cover;
+  background-size: 100% auto;
   background-position: center;
+  background-repeat: no-repeat;
 }
 #Featured .sub_Swiper .swiper-slide-active .txtBox {
   opacity: 1;
+}
+#Featured .sub_Swiper .sup_swiper-pagination {
+  position: absolute;
+  display: flex;
+  width: 1rem;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  top: 50%;
+  left: 1rem !important;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+#Featured .sub_Swiper .swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  margin: 0.25rem 0;
 }
 #Featured .max_Swiper {
   position: absolute !important;
@@ -421,7 +443,7 @@ footer .logo {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 0;
 }
 #Services .btn {
   background: rgba(255, 255, 255, 0.2);
@@ -438,10 +460,22 @@ footer .logo {
   width: 100%;
   margin: 0 auto;
 }
+@media only screen and (max-width: 768px) {
+  #Customers .Customers-swiper {
+    width: 90%;
+  }
+}
 #Customers .item {
   display: flex;
   justify-content: center;
   color: #ccc;
+}
+@media only screen and (max-width: 768px) {
+  #Customers .item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 #Customers .item.swiper-slide-active {
   color: #121212;
@@ -449,11 +483,15 @@ footer .logo {
 #Customers .item-img {
   margin-right: 3%;
 }
+@media only screen and (max-width: 768px) {
+  #Customers .item-img {
+    margin-bottom: 8%;
+  }
+}
 #Customers .item-img img {
   width: 7rem;
   height: auto;
   border-radius: 50%;
-  border: 1px solid;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -471,6 +509,11 @@ footer .logo {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+@media only screen and (max-width: 768px) {
+  #Customers .item-text {
+    width: 90%;
+  }
 }
 #Customers .customer-name {
   position: relative;
@@ -560,12 +603,15 @@ iframe {
 }
 #e-newsletter .infoBox ::-moz-placeholder {
   color: #fff;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 #e-newsletter .infoBox ::placeholder {
   color: #fff;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
-#e-newsletter .infoBox ::-ms-input-placeholder { /* Edge 12 -18 */
+#e-newsletter .infoBox ::-ms-input-placeholder {
+  /* Edge 12 -18 */
   color: #fff;
 }/*# sourceMappingURL=main.css.map */

@@ -3,29 +3,35 @@
     "use strict";
 
     $(document).ready(function () {
-        const swiper2 = new Swiper('.max_Swiper', {
+        const swiper2 = new Swiper('.sub_Swiper', {
             loop: false,
             slidesPerView: 1,
             spaceBetween: 0,
             noSwiping: true,
-            
-            navigation: {
-                nextEl: '.swiper_index-button-next',
-                prevEl: '.swiper_index-button-prev',
+            zoom : true,
+            mousewheel: true,
+            // navigation: {
+            //     nextEl: '.swiper_index-button-next',
+            //     prevEl: '.swiper_index-button-prev',
+            // },
+            pagination: {
+                el: ".sup_swiper-pagination",
+                dynamicBullets: false,
+                clickable: true,
             },
-            thumbs: {
-                swiper: {
-                    el: ".sub_Swiper",
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    watchSlidesVisibility: true,/*避免出现bug*/
-                    noSwiping: true,
-                    // centeredSlides: true,
-                    fadeEffect: {
-                        crossFade: true,
-                    },
-                },
-            },
+            // thumbs: {
+            //     swiper: {
+            //         el: ".sub_Swiper",
+            //         slidesPerView: 1,
+            //         spaceBetween: 0,
+            //         watchSlidesVisibility: true,/*避免出现bug*/
+            //         noSwiping: true,
+            //         // centeredSlides: true,
+            //         fadeEffect: {
+            //             crossFade: true,
+            //         },
+            //     },
+            // },
         });
 
         const kv_Swiper = new Swiper('.kv_Swiper', {
@@ -46,12 +52,11 @@
             spaceBetween: 30,
             freeMode: true,
             centeredSlides: false,
-            // allowTouchMove: true,
-            // autoplay : {
-            //     delay: 5000
-            // },
+            allowTouchMove: true,
+            autoplay : {
+                delay: 5000
+            },
             breakpoints: {
-                
                 991: {
                     slidesPerView: 2.5,
                     spaceBetween: 10,
