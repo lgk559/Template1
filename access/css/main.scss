@@ -66,7 +66,7 @@
   .navbar-brand {
     width: 30%;
     text-align: right;
-    background-image: url(/access/images/logo.png);
+    background-image: url(../images/logo.png);
     display: block;
     height: 2rem;
     background-size: contain;
@@ -454,6 +454,10 @@ footer {
     left: 12%;
     width: 38%;
     color: #fff;
+    @media only screen and (max-width: 768px) {
+      left: 7%;
+      width: 80%;
+    }
   }
 }
 
