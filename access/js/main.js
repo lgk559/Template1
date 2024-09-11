@@ -22,11 +22,10 @@
             autoplay: false,
             mousewheel: {
                 forceToAxis: true,
-                sensitivity: 1,
                 releaseOnEdges: true,
             },
-            effect: 'fade',
-            speed: 1200,
+            // effect: 'fade',
+            speed: 2400,
             pagination: {
                 el: ".kv_Swiper .swiper-pagination",
                 dynamicBullets: false,
