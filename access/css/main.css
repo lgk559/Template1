@@ -86,7 +86,12 @@
   height: auto;
 }
 #header .nav-link {
-  color: #000;
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  #header .nav-link {
+    color: #000;
+  }
 }
 #header .nav-link:hover, #header .nav-link.active {
   font-weight: 600;
@@ -165,6 +170,17 @@ footer .logo {
 }
 .section-title .section-subtitle {
   font-weight: 400;
+}
+
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.8;
+  background-color: #fff;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: #000;
 }
 
 .s-block {
@@ -319,7 +335,6 @@ footer .logo {
   width: 100%;
   height: auto;
   max-height: 100vh;
-  cursor: ns-resize;
 }
 @media only screen and (max-width: 768px) {
   .kv_Swiper {
@@ -328,10 +343,6 @@ footer .logo {
 }
 .kv_Swiper .swiper-pagination {
   right: 12% !important;
-}
-.kv_Swiper .swiper-pagination-bullet {
-  width: 1rem;
-  height: 1rem;
 }
 .kv_Swiper img {
   width: 100%;

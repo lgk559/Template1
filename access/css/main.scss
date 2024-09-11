@@ -88,7 +88,10 @@
   }
 
   .nav-link {
-    color: #000;
+    color: #fff;
+    @media only screen and (max-width: 768px) {
+      color: #000;
+    }
     &:hover,
     &.active {
       font-weight: 600;
@@ -184,6 +187,19 @@ footer {
     font-weight: 400;
   }
 }
+
+// 輪播-分頁器
+.swiper-pagination-bullet {
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.8;
+  background-color: #fff;
+  &.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #000;
+  }
+}
+
 
 .s-block {
   position: absolute;
@@ -337,7 +353,7 @@ footer {
   width: 100%;
   height: auto;
   max-height: 100vh;
-  cursor: ns-resize;
+  // cursor: ns-resize;
   @media only screen and (max-width: 768px) {
     max-height: 50vw;
   }
@@ -346,10 +362,8 @@ footer {
     right: 12% !important;
   }
 
-  .swiper-pagination-bullet {
-    width: 1rem;
-    height: 1rem;
-  }
+
+  
 
   img {
     width: 100%;
