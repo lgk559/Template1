@@ -4,41 +4,29 @@
 
     $(document).ready(function () {
         const swiper2 = new Swiper('.sub_Swiper', {
-            loop: false,
-            slidesPerView: 1,
-            spaceBetween: 0,
-            noSwiping: true,
-            zoom : true,
-            mousewheel: true,
-            // navigation: {
-            //     nextEl: '.swiper_index-button-next',
-            //     prevEl: '.swiper_index-button-prev',
-            // },
+            zoom: true,
+            direction: 'horizontal',
+            speed: 2400,
+            mousewheel: {
+                releaseOnEdges: true,
+            },
             pagination: {
                 el: ".sup_swiper-pagination",
                 dynamicBullets: false,
                 clickable: true,
             },
-            // thumbs: {
-            //     swiper: {
-            //         el: ".sub_Swiper",
-            //         slidesPerView: 1,
-            //         spaceBetween: 0,
-            //         watchSlidesVisibility: true,/*避免出现bug*/
-            //         noSwiping: true,
-            //         // centeredSlides: true,
-            //         fadeEffect: {
-            //             crossFade: true,
-            //         },
-            //     },
-            // },
         });
 
         const kv_Swiper = new Swiper('.kv_Swiper', {
-            loop: true,
             direction: 'vertical',
             autoplay: false,
-            mousewheel: true,
+            mousewheel: {
+                forceToAxis: true,
+                sensitivity: 1,
+                releaseOnEdges: true,
+            },
+            effect: 'fade',
+            speed: 1200,
             pagination: {
                 el: ".kv_Swiper .swiper-pagination",
                 dynamicBullets: false,
@@ -53,8 +41,9 @@
             freeMode: true,
             centeredSlides: false,
             allowTouchMove: true,
-            autoplay : {
-                delay: 5000
+            speed: 5000,
+            autoplay: {
+                delay: 2500
             },
             breakpoints: {
                 991: {
@@ -70,8 +59,8 @@
             }
         })
 
-        
-        
+
+
         // init jarallax parallax
         var initJarallax = function () {
             jarallax(document.querySelectorAll(".jarallax"));
@@ -80,23 +69,23 @@
             });
         }
         initJarallax();
-        
+
         // init gasp
-        setTimeout(function () { 
+        setTimeout(function () {
             gsap.registerPlugin(ScrollTrigger);
             // header
             gsap.to("#header", {
                 duration: 1,
-                scrollTrigger: {  
-                trigger: '#kv',
-                markers: false,
-                start: "top bottom", 
-                end: "bottom top",
-                onEnter: () => { $("#header").removeClass('scroll') },
-                onEnterBack: () => { $("#header").removeClass('scroll') },
-                onLeave: () => { $("#header").addClass('scroll') },
-                onLeaveBack: () => { $("#header").addClass('scroll') },
-            }          
+                scrollTrigger: {
+                    trigger: '#kv',
+                    markers: false,
+                    start: "top bottom",
+                    end: "bottom top",
+                    onEnter: () => { $("#header").removeClass('scroll') },
+                    onEnterBack: () => { $("#header").removeClass('scroll') },
+                    onLeave: () => { $("#header").addClass('scroll') },
+                    onLeaveBack: () => { $("#header").addClass('scroll') },
+                }
             });
 
             gsap.utils.toArray(".item-bg").forEach((item, i) => {
@@ -104,13 +93,13 @@
                     left: "120%",
                     duration: 2,
                     ease: "slow(0.1,0.4,false)",
-                    scrollTrigger: {  
-                    trigger: item,
-                    markers: false,
-                    start: "top bottom", 
-                    end: "bottom top",
-                    toggleActions: "restart pause restart pause",
-                }          
+                    scrollTrigger: {
+                        trigger: item,
+                        markers: false,
+                        start: "top bottom",
+                        end: "bottom top",
+                        toggleActions: "restart pause restart pause",
+                    }
                 });
             });
 
@@ -122,26 +111,30 @@
                 let offset = item.getAttribute("data-offset") ? item.getAttribute("data-offset") : 0
                 const eachTop = $(href).offset().top - $('#header').height() - offset
                 gsap.to(href, {
-                  scrollTrigger: {
-                    trigger: href,
-                    markers: false,
-                    start: "top 40%",
-                    end: "bottom 20%",
-                    onEnter: () => { $(`#header a[href='${href}']`).addClass('active') },
-                    onEnterBack: () => { $(`#header a[href='${href}']`).addClass('active') },
-                    onLeave: () => { $(`#header a[href='${href}']`).removeClass('active') },
-                    onLeaveBack: () => { $(`#header a[href='${href}']`).removeClass('active') },
-                  },
+                    scrollTrigger: {
+                        trigger: href,
+                        markers: false,
+                        start: "top 40%",
+                        end: "bottom 20%",
+                        onEnter: () => { $(`#header a[href='${href}']`).addClass('active') },
+                        onEnterBack: () => { $(`#header a[href='${href}']`).addClass('active') },
+                        onLeave: () => { $(`#header a[href='${href}']`).removeClass('active') },
+                        onLeaveBack: () => { $(`#header a[href='${href}']`).removeClass('active') },
+                    },
                 })
                 item.addEventListener('click', function (e) {
-                  e.preventDefault()
-                  // console.log(item, eachTop)
-                  $("html, body").animate({ scrollTop: eachTop }, 600);
+                    e.preventDefault()
+                    // console.log(item, eachTop)
+                    $("html, body").animate({ scrollTop: eachTop }, 600);
                 })
-              })
+            })
 
-         }, 1000);
-        
+        }, 1000);
+
+        // var offcanvasElementList = [].slice.call(document.querySelectorAll('.offcanvas'))
+        // var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
+        //     return new bootstrap.Offcanvas(offcanvasEl)
+        // })
 
 
 

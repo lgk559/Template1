@@ -58,13 +58,13 @@
   .offcanvas-end {
     max-width: 65%;
 
-    @media only screen and (max-width: 1000px) {
-      max-width: unset;
-    }
+    // @media only screen and (max-width: 1000px) {
+    //   max-width: unset;
+    // }
   }
 
   .navbar-brand {
-    width: 30%;
+    width: 6rem;
     text-align: right;
     background-image: url(../images/logo.png);
     display: block;
@@ -72,40 +72,52 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    @media only screen and (max-width: 768px) {
+      background-image: url(../images/logo.png);
+    }
   }
-
+  // 手機版展開的選單
+  .offcanvas {
+    .navbar-brand{
+      background-image: url(../images/logo_drank.png);
+    }
+  }
   .logo {
     width: 155px;
     height: auto;
   }
 
   .nav-link {
-    color: #ffffff;
-
-    @media only screen and (max-width: 768px) {
-      color: #ffffff;
-    }
-
+    color: #000;
     &:hover,
     &.active {
       font-weight: 600;
     }
   }
-
   .navbar-toggler {
-    color: #ffffff;
+    color: #fff;
   }
+
+    
+  
+
+
 
   &.scroll {
     background-color: #fff;
-
     .nav-link,
     .navbar-toggler {
       color: #000;
+      @media only screen and (max-width: 768px) {
+        color: #000;
+      }
 
       &:hover,
       &.active {
         color: #ff0066;
+        @media only screen and (max-width: 768px) {
+          color: #ff0066;
+        }
       }
     }
 
@@ -113,6 +125,8 @@
       background-image: url(../images/logo_drank.png);
     }
   }
+
+
 }
 
 // footer
@@ -139,9 +153,9 @@ footer {
   }
 }
 
-.offcanvas.show .nav-item a.nav-link {
-  font-size: 2em;
-}
+// .offcanvas.show .nav-item a.nav-link {
+//   font-size: 2em;
+// }
 
 .offcanvas.show .offcanvas-body .navbar-nav {
   align-items: unset !important;
@@ -219,12 +233,14 @@ footer {
 // 商品輪播
 #Featured {
   position: relative;
-
   .section-title {
     position: relative;
     padding-top: 5.5%;
     left: 50%;
     transform: translateX(-50%);
+    @media only screen and (max-width: 768px) {
+      padding-top: 0;
+    }
   }
 
   .box {
@@ -235,13 +251,11 @@ footer {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
-
     @media only screen and (max-width: 768px) {
+      width: 100%;
       max-height: unset;
       height: 150vw;
     }
-
-
   }
 
   .swiper {
@@ -252,80 +266,51 @@ footer {
 
   .sub_Swiper {
     .txtBox {
-      // border: 1px solid #000;
       width: 20%;
       position: relative;
       top: 50%;
       left: 70%;
       transition: opacity 0.25s 0.2s !important;
-      opacity: 0;
+      opacity: 1;
       color: #000;
       transform: translateY(-50%);
-
       @media only screen and (max-width: 768px) {
-        top: 7%;
-        width: 80%;
+        top: 0%;
+        width: 100%;
+        left: 0;
+        transform: translate(0,0);
       }
     }
-
     .bg {
       width: 60%;
       height: 100%;
-
-      div {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .bg {
       position: absolute;
       top: 0;
       left: 0;
-
+      @media only screen and (max-width: 768px) {
+        width: 100%;
+      }
       div {
+        width: 100%;
+        height: 100%;
         background-size: 100% auto;
         background-position: center;
         background-repeat: no-repeat;
-        // clip-path: circle(0% at 100% 100%);
-        // clip-path: circle(0% at 50% -50%);
-        // clip-path: xywh(50% 50% 0% 10% round 2rem 2rem);
-        // transition: clip-path 0.8s 0.1s !important;
-        // @media only screen and (max-width: 768px) {
-        //   clip-path: xywh(0% 5% 95% 70% round 2rem 2rem);
-        // }
+        @media only screen and (max-width: 768px) {
+          background-position: bottom;
+        }
       }
     }
 
     .swiper-slide {
-      // background-color: #ccc;
-    }
-
-    .swiper-slide-active {
-      .bg {
-        div {
-          // clip-path: circle(100% at 50% 50%);
-          // clip-path: xywh(0% 0% 100% 98% round 2rem 2rem);
-
-          // @media only screen and (max-width: 768px) {
-          //   // clip-path: unset;
-          //   clip-path: xywh(5% 0% 90% 100% round 2rem 2rem);
-          // }
-        }
+      @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
       }
-
-      .txtBox {
-        // left: 10%;
-        opacity: 1;
-
-      }
-
-      // .title {
-      //   font-weight: 600;
-      //   font-size: 1.2rem;
-      // }
     }
-
     .sup_swiper-pagination {
       position: absolute;
       display: flex;
@@ -345,89 +330,14 @@ footer {
       margin: 0.25rem 0;
     }
   }
-
-  .max_Swiper {
-    position: absolute !important;
-    // max-width: 60%;
-    width: 66%;
-    // height: 100%;
-    top: 50%;
-    /* max-height: 500px; */
-    /* left: 64%; */
-    left: 0%;
-    transform: translate(0%, -50%);
-    overflow: hidden;
-    border: 1px solid #000;
-
-    @media only screen and (max-width: 768px) {
-      max-width: 100%;
-      height: 75%;
-      top: unset;
-      bottom: 0;
-      right: -3%;
-    }
-
-    &.swiper-3d .swiper-slide-shadow-right,
-    &.swiper-3d .swiper-slide-shadow-left {
-      background-image: unset !important;
-    }
-
-    img {
-      opacity: 0;
-      width: auto;
-      height: 100%;
-      transform: translateZ(0) translateX(80%);
-      transition: transform 1s 0.25s !important;
-      user-select: none;
-    }
-
-    .cover {
-      width: 40%;
-      position: absolute;
-      z-index: 0;
-      /* bottom: 0; */
-      top: 80%;
-      left: 58%;
-      opacity: 1;
-      transform: translate(-50%, -50%);
-
-      @media only screen and (max-width: 768px) {
-        top: unset;
-        bottom: 10%;
-        position: absolute;
-        width: 55%;
-        left: 2%;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-
-    .swiper-slide-next {
-      img {
-        opacity: 1;
-      }
-    }
-
-    .swiper-slide-active {
-      img {
-        opacity: 1;
-        transform: translateZ(0) translateX(20%);
-      }
-    }
-
-  }
 }
 
 // kv輪播
 .kv_Swiper {
   width: 100%;
   height: auto;
-  // max-width: 1920px;
   max-height: 100vh;
   cursor: ns-resize;
-
   @media only screen and (max-width: 768px) {
     max-height: 50vw;
   }
