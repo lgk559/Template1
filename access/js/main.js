@@ -4,7 +4,6 @@
 
     $(document).ready(function () {
         const swiper2 = new Swiper('.sub_Swiper', {
-            zoom: true,
             direction: 'horizontal',
             speed: 2400,
             mousewheel: {
@@ -36,23 +35,23 @@
         const Customers_swiper = new Swiper('.Customers-swiper', {
             loop: true,
             slidesPerView: 1,
-            spaceBetween: 30,
             freeMode: true,
-            centeredSlides: false,
-            allowTouchMove: true,
+            centeredSlides: true,
+            // allowTouchMove: true,
             speed: 5000,
+            spaceBetween: 0,
             autoplay: {
                 delay: 2500
             },
             breakpoints: {
                 991: {
                     slidesPerView: 2.5,
-                    spaceBetween: 10,
+                    spaceBetween: 80,
                     centeredSlides: true,
                 },
                 768: {
-                    slidesPerView: 1.5,
-                    spaceBetween: 10,
+                    slidesPerView: 1.8,
+                    spaceBetween: 80,
                     centeredSlides: true,
                 },
             }
