@@ -8,6 +8,7 @@
             speed: 2400,
             mousewheel: {
                 releaseOnEdges: true,
+                touchReleaseOnEdges: true
             },
             pagination: {
                 el: ".sup_swiper-pagination",
@@ -26,6 +27,7 @@
             mousewheel: {
                 // forceToAxis: true,
                 releaseOnEdges: true,
+                touchReleaseOnEdges: true
             },
             // effect: 'fade',
             speed: 2400,
