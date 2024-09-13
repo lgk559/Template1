@@ -192,6 +192,12 @@ footer .footer-main {
   background-color: #000;
 }
 
+.swiper-button-prev {
+  color: #000;
+}
+.swiper-button-next {
+  color: #000;
+}
 .s-block {
   position: absolute;
 }
@@ -602,16 +608,6 @@ footer .footer-main {
 }
 #Customers .Customers-swiper {
   cursor: ew-resize;
-}
-@media only screen and (min-width: 992px) {
-  #Customers .swiper_Customers-button-prev {
-    display: none;
-  }
-}
-@media only screen and (min-width: 992px) {
-  #Customers .swiper_Customers-button-next {
-    display: none;
-  }
 }
 
 #contact {

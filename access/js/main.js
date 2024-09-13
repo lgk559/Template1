@@ -14,13 +14,17 @@
                 dynamicBullets: false,
                 clickable: true,
             },
+            navigation: {
+                nextEl: ".sup_swiper-button-next",
+                prevEl: ".sup_swiper-button-prev",
+            },
         });
 
         const kv_Swiper = new Swiper('.kv_Swiper', {
             direction: 'vertical',
             autoplay: false,
             mousewheel: {
-                forceToAxis: true,
+                // forceToAxis: true,
                 releaseOnEdges: true,
             },
             // effect: 'fade',
@@ -42,6 +46,10 @@
             spaceBetween: 0,
             autoplay: {
                 delay: 2500
+            },
+            navigation: {
+                nextEl: ".swiper_Customers-button-next",
+                prevEl: ".swiper_Customers-button-prev",
             },
             breakpoints: {
                 991: {

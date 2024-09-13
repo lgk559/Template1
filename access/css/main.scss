@@ -206,6 +206,18 @@ footer {
   }
 }
 
+.swiper-button-prev {
+  color: #000;
+  @media only screen and (min-width: 992px) {
+  }
+}
+
+.swiper-button-next {
+  color: #000;
+  @media only screen and (min-width: 992px) {
+  }
+}
+
 
 .s-block {
   position: absolute;
@@ -610,17 +622,7 @@ footer {
     cursor: ew-resize;
   }
 
-  .swiper_Customers-button-prev {
-    @media only screen and (min-width: 992px) {
-      display: none;
-    }
-  }
-
-  .swiper_Customers-button-next {
-    @media only screen and (min-width: 992px) {
-      display: none;
-    }
-  }
+  
 }
 
 // 聯絡我們 contact
