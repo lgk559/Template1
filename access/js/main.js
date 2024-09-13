@@ -44,7 +44,7 @@
             freeMode: true,
             centeredSlides: true,
             // allowTouchMove: true,
-            speed: 5000,
+            speed: 1200,
             spaceBetween: 0,
             autoplay: {
                 delay: 2500
