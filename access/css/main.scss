@@ -313,7 +313,7 @@ footer {
       width: 35%;
       position: relative;
       transition: opacity 0.25s 0.2s !important;
-      opacity: 1;
+      // opacity: 1;
       color: #000;
       @media only screen and (max-width: 768px) {
         margin-top: 5%;
@@ -377,7 +377,7 @@ footer {
     .swiper-slide {
       overflow: hidden;
       width: 100%;
-      opacity: 0;
+      // opacity: 0;
       @media only screen and (max-width: 768px) {
         // display: flex;
         flex-direction: column;
@@ -409,6 +409,30 @@ footer {
       width: 1rem;
       height: 1rem;
       margin: 0.25rem 0;
+    }
+  }
+  .swiper-button-prev{
+    top: 60%;
+    left: 5%;
+    @media only screen and (max-width: 768px) {
+      top: 50%;
+      left: 0%;
+    }
+    @media only screen and (max-width: 430px) {
+      top: 50%;
+      left: -2%;
+    }
+  }
+  .swiper-button-next{
+    top: 60%;
+    right: 5%;
+    @media only screen and (max-width: 768px) {
+      top: 50%;
+      right: 0%;
+    }
+    @media only screen and (max-width: 430px) {
+      top: 50%;
+      right: -2%;
     }
   }
 }
@@ -621,7 +645,12 @@ footer {
   .Customers-swiper {
     cursor: ew-resize;
   }
-
+  .swiper-button-prev,.swiper-button-next {
+    @media only screen and (min-width: 501px) {
+      top: 65%;
+      transform: translateY(-50%);
+    }
+  }
   
 }
 

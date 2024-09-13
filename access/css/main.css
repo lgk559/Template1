@@ -296,7 +296,6 @@ footer .footer-main {
   width: 35%;
   position: relative;
   transition: opacity 0.25s 0.2s !important;
-  opacity: 1;
   color: #000;
 }
 @media only screen and (max-width: 768px) {
@@ -371,7 +370,6 @@ footer .footer-main {
 #Featured .sub_Swiper .swiper-slide {
   overflow: hidden;
   width: 100%;
-  opacity: 0;
 }
 @media only screen and (max-width: 768px) {
   #Featured .sub_Swiper .swiper-slide {
@@ -404,6 +402,38 @@ footer .footer-main {
   width: 1rem;
   height: 1rem;
   margin: 0.25rem 0;
+}
+#Featured .swiper-button-prev {
+  top: 60%;
+  left: 5%;
+}
+@media only screen and (max-width: 768px) {
+  #Featured .swiper-button-prev {
+    top: 50%;
+    left: 0%;
+  }
+}
+@media only screen and (max-width: 430px) {
+  #Featured .swiper-button-prev {
+    top: 50%;
+    left: -2%;
+  }
+}
+#Featured .swiper-button-next {
+  top: 60%;
+  right: 5%;
+}
+@media only screen and (max-width: 768px) {
+  #Featured .swiper-button-next {
+    top: 50%;
+    right: 0%;
+  }
+}
+@media only screen and (max-width: 430px) {
+  #Featured .swiper-button-next {
+    top: 50%;
+    right: -2%;
+  }
 }
 
 .kv_Swiper {
@@ -608,6 +638,12 @@ footer .footer-main {
 }
 #Customers .Customers-swiper {
   cursor: ew-resize;
+}
+@media only screen and (min-width: 501px) {
+  #Customers .swiper-button-prev, #Customers .swiper-button-next {
+    top: 65%;
+    transform: translateY(-50%);
+  }
 }
 
 #contact {
