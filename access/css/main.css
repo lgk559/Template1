@@ -27,6 +27,11 @@
   --swiper-pagination-color: #000 !important;
 }
 
+.timeline .dialog_wrapper .dialog::after, .timeline .dialog_wrapper::before, .timeline .dialog_wrapper::after {
+  position: absolute;
+  content: "";
+}
+
 /* 1. Header
 /*----------------------------------------------*/
 .site-header {
@@ -192,6 +197,10 @@ footer .footer-main {
   background-color: #000;
 }
 
+.swiper-button-prev, .swiper-button-next {
+  z-index: 9;
+}
+
 .swiper-button-prev {
   color: #000;
 }
@@ -273,7 +282,7 @@ footer .footer-main {
 }
 #Featured .box {
   width: 70%;
-  height: 40vw;
+  height: 45vw;
   max-width: 1200px;
   position: relative;
   overflow: hidden;
@@ -301,7 +310,7 @@ footer .footer-main {
 @media only screen and (max-width: 768px) {
   #Featured .sub_Swiper .txtBox {
     margin-top: 5%;
-    width: 75%;
+    width: 100%;
     height: 40%;
     text-align: center;
   }
@@ -339,19 +348,19 @@ footer .footer-main {
   justify-content: space-between;
   align-items: center;
 }
-#Featured .sub_Swiper .bg {
+#Featured .sub_Swiper .goodImg {
   width: 60%;
   height: 100%;
   top: 0;
   left: 0;
 }
 @media only screen and (max-width: 768px) {
-  #Featured .sub_Swiper .bg {
+  #Featured .sub_Swiper .goodImg {
     width: 100%;
     height: 80vw;
   }
 }
-#Featured .sub_Swiper .bg div {
+#Featured .sub_Swiper .goodImg div {
   width: 100%;
   height: 100%;
   background-size: 100% auto;
@@ -359,7 +368,7 @@ footer .footer-main {
   background-repeat: no-repeat;
 }
 @media only screen and (max-width: 768px) {
-  #Featured .sub_Swiper .bg div {
+  #Featured .sub_Swiper .goodImg div {
     background-size: contain;
     background-position: top center;
   }
@@ -727,4 +736,301 @@ iframe {
 #e-newsletter .infoBox ::-ms-input-placeholder {
   /* Edge 12 -18 */
   color: #fff;
+}
+
+.line {
+  max-width: 8rem;
+  max-height: 0.5rem;
+  width: 10vw;
+  height: 1vw;
+  background-color: #ccc;
+  margin: 0 5%;
+  transform: translateY(-0.8rem);
+}
+.item.active .line {
+  background-color: #000;
+}
+
+.timeline, .dialog_wrapper {
+  padding: 0;
+  list-style: none;
+}
+
+.timelineBox {
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+  padding: 2rem 0 6rem;
+}
+@media (max-width: 1200px) {
+  .timelineBox {
+    padding: 0rem 0 2rem;
+  }
+}
+
+.timeline {
+  position: relative;
+  width: 640px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .timeline::before {
+    content: "";
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(230deg, #efd7ec 0%, #bfc2fe 60%, #b0e2ef 80%);
+    position: absolute;
+    top: 6%;
+    right: 50%;
+    display: block;
+    z-index: 1;
+  }
+}
+.timeline .dialog_wrapper {
+  position: relative;
+  flex: 0 0 50%;
+  height: auto;
+  margin: 1rem 0;
+  z-index: 1;
+  max-width: 305px;
+  cursor: default;
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper {
+    flex: 0 0 100%;
+    max-width: unset;
+  }
+}
+.timeline .dialog_wrapper::after {
+  top: -20%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper::after {
+    display: none;
+  }
+}
+.timeline .dialog_wrapper::before {
+  top: -30%;
+  width: 2rem;
+  height: 4rem;
+  background-image: url(../images/timeline_point.png);
+  z-index: 4;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper::before {
+    display: none;
+  }
+}
+.timeline .dialog_wrapper .dialog {
+  position: relative;
+  top: -4rem;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: -5px 2px 31px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper .dialog {
+    top: 8px;
+    max-width: 314px;
+    margin: 0 auto;
+    background: #fff;
+  }
+}
+.timeline .dialog_wrapper .dialog::after {
+  top: 22%;
+  width: 5px;
+  height: 140%;
+  z-index: 1;
+  background: linear-gradient(230deg, #e6d7ef 0%, #bfc2fe 60%, #b0e2ef 80%);
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper .dialog::after {
+    display: none;
+  }
+}
+.timeline .dialog_wrapper .infoBox {
+  background-color: #fff;
+  flex-grow: 1;
+  padding: 1rem;
+  max-height: 8rem;
+  height: 24vw;
+  border-radius: 0px 10px 10px 0px;
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper .infoBox {
+    flex: 0 0 65%;
+    height: 35vw;
+  }
+}
+.timeline .dialog_wrapper .imgBOx {
+  max-width: 8rem;
+  max-height: 8rem;
+  width: 24vw;
+  height: 24vw;
+  margin-right: 0rem;
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper .imgBOx {
+    width: 35vw;
+    height: 35vw;
+  }
+}
+.timeline .dialog_wrapper .imgBOx img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 0px 0 10px;
+}
+.timeline .dialog_wrapper:nth-of-type(2n+1) {
+  right: 2rem;
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper:nth-of-type(2n+1) {
+    right: 0;
+  }
+}
+.timeline .dialog_wrapper:nth-of-type(2n+1)::after {
+  right: -1.4rem;
+  border-width: 1.5rem 0rem 1.5rem 2rem;
+  border-color: transparent transparent transparent #fff;
+  border-radius: 5px;
+}
+.timeline .dialog_wrapper:nth-of-type(2n+1)::before {
+  right: -3.9rem;
+}
+.timeline .dialog_wrapper:nth-of-type(2n+1) .dialog::after {
+  right: -3rem;
+  background: linear-gradient(230deg, #e8bddb, #efd9e8);
+}
+.timeline .dialog_wrapper:nth-of-type(2n) {
+  left: 3.7rem;
+  z-index: 1;
+  transform: translateY(85%);
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper:nth-of-type(2n) {
+    left: 0rem;
+    transform: translateY(0%);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+.timeline .dialog_wrapper:nth-of-type(2n)::after {
+  left: -1.4rem;
+  z-index: 0;
+  border-width: 1.5rem 2rem 1.5rem 0;
+  border-color: transparent #fff transparent transparent;
+}
+.timeline .dialog_wrapper:nth-of-type(2n)::before {
+  left: -3.8rem;
+}
+.timeline .dialog_wrapper:nth-of-type(2n) .dialog::after {
+  left: -3.04rem;
+}
+@media (max-width: 1300px) {
+  .timeline .dialog_wrapper:nth-of-type(2n) .dialog::after {
+    left: -3.01rem;
+  }
+}
+.timeline .dialog_wrapper:nth-of-type(2n) .infoBox {
+  left: -0.3rem;
+  order: 1;
+  border-radius: 10px 0px 0px 10px;
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper:nth-of-type(2n) .infoBox {
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+.timeline .dialog_wrapper:nth-of-type(2n) .imgBOx {
+  order: 2;
+  margin-right: unset;
+  margin-left: 1rem;
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper:nth-of-type(2n) .imgBOx {
+    margin-left: unset;
+  }
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper:nth-of-type(2n) .imgBOx {
+    order: 1;
+  }
+}
+.timeline .dialog_wrapper:nth-of-type(2n) .imgBOx img {
+  border-radius: 0px 10px 10px 0px;
+}
+@media (max-width: 1200px) {
+  .timeline .dialog_wrapper:nth-of-type(2n) .imgBOx img {
+    border-radius: 10px 0px 0px 10px;
+  }
+}
+.timeline .dialog_wrapper:nth-of-type(3n) .dialog::after {
+  background: linear-gradient(230deg, #b0e2ef 0%, #5ed1e1 60%, #5ed1e1 80%);
+}
+
+body.compensate-for-scrollbar {
+  overflow: auto !important;
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  width: 60px;
+  height: 60px;
+}
+
+.fancybox-content {
+  max-width: 1000px;
+  max-height: 800px;
+}
+@media only screen and (max-width: 768px) {
+  .fancybox-content {
+    padding: 5% 5%;
+  }
+}
+
+.modal-title {
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+@media only screen and (max-width: 768px) {
+  .modal-title {
+    margin-top: 2rem;
+  }
+}
+
+.modal-subTitle {
+  border-left: 4px solid #000;
+  font-weight: 900;
+  margin-left: 0.25rem;
+  padding: 0 0.25rem 0 0.5rem;
+  margin: 1.5rem 0 1rem 0.25rem;
+}
+
+.customersLogo-item {
+  width: auto;
+  height: 10vw;
+  max-height: 140px;
+  padding: 1rem 1.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .customersLogo-item {
+    padding: 1% 3%;
+  }
 }/*# sourceMappingURL=main.css.map */

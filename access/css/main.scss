@@ -4,6 +4,19 @@
 /*--------------------------------------------------------------
 /** 1. VARIABLES
 --------------------------------------------------------------*/
+$destopSize: 1280px;
+$ipadSize: 1200px;
+$md: 767px;
+$sm: 576px;
+
+  $--bs-gray-0: #ffffff;
+  $--bs-gray-100: #f3f3f3;
+  $--bs-gray-200: #efefef;
+  $timeline-main: #fff; 
+  $timeline-line: #ffcc00; 
+  $timeline-shadow: #000; 
+  $timeline-opacity: 0.2; 
+
 :root {
   --accent-color: #0d0d0d;
   --bs-gray-100: #f3f3f3;
@@ -19,6 +32,13 @@
   --swiper-pagination-color: #000 !important;
 
 }
+
+// 偽元素
+%pseudo {
+  position: absolute;
+  content: "";
+}
+
 
 /* 1. Header
 /*----------------------------------------------*/
@@ -205,7 +225,9 @@ footer {
     background-color: #000;
   }
 }
-
+.swiper-button-prev, .swiper-button-next{
+  z-index: 9;
+}
 .swiper-button-prev {
   color: #000;
   @media only screen and (min-width: 992px) {
@@ -289,7 +311,7 @@ footer {
 
   .box {
     width: 70%;
-    height: 40vw;
+    height: 45vw;
     // max-height: 700px;
     max-width: 1200px;
     position: relative;
@@ -317,7 +339,7 @@ footer {
       color: #000;
       @media only screen and (max-width: 768px) {
         margin-top: 5%;
-        width: 75%;
+        width: 100%;
         height: 40%;
         text-align: center;       
       }
@@ -349,7 +371,7 @@ footer {
       justify-content: space-between;
       align-items: center;
     }
-    .bg {
+    .goodImg {
       width: 60%;
       height: 100%;
       // position: absolute;
@@ -411,6 +433,7 @@ footer {
       margin: 0.25rem 0;
     }
   }
+
   .swiper-button-prev{
     top: 60%;
     left: 5%;
@@ -740,5 +763,288 @@ iframe {
       /* Edge 12 -18 */
       color: #fff;
     }
+  }
+}
+
+.line {
+  max-width: 8rem;
+  max-height: 0.5rem;
+  width: 10vw;
+  height: 1vw;
+  background-color: #ccc;
+  margin: 0 5%;
+  transform: translateY(-0.8rem);
+  .item.active & {
+      background-color: #000;
+  }
+}
+
+
+// brand 品牌
+.timeline, .dialog_wrapper {
+  padding: 0;
+  list-style: none;
+}
+.timelineBox {
+  // background-color: $--bs-gray-200;
+  display: flex;
+  justify-content: center;
+  align-content: stretch; 
+  padding: 2rem 0 6rem;
+  @media (max-width: $ipadSize) {
+    padding: 0rem 0 2rem;
+  }
+}
+.timeline {
+  // 電腦版會是兩欄排列；手機版是一欄排列
+  position: relative;
+  width: 640px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  &::before {
+    @media (max-width: $ipadSize) {
+      // 手機版的時間軸線
+      content: "";
+      width: 5px;
+      height: 100%;
+      // border: 1px dashed $timeline-line;
+      background: linear-gradient(230deg, #efd7ec 0%, #bfc2fe 60%, #b0e2ef 80%);
+      position: absolute;
+      top: 6%;
+      right: 50%;
+      display: block;
+      z-index: 1;
+    }
+  }
+  .dialog_wrapper {
+    position: relative;
+    flex: 0 0 50%;
+    height: auto;
+    margin: 1rem 0;
+    z-index: 1;
+    max-width: 305px;
+    cursor: default;
+    @media (max-width: $ipadSize) {
+      flex: 0 0 100%;
+      max-width: unset;
+    }
+    &::after {
+      // 裝飾(三角型，手機版會隱藏)
+      @extend %pseudo;
+      top: -20%;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      @media (max-width: $ipadSize) {
+        display: none;
+      }
+    }
+    &::before {
+      // 裝飾(時間軸線上的點，手機版會隱藏)
+      @extend %pseudo;
+      top: -30%;
+      width: 2rem;
+      height: 4rem;
+      background-image: url(../images/timeline_point.png);
+      z-index: 4;
+      background-size: contain;
+      background-repeat: no-repeat;
+      @media (max-width: $ipadSize) {
+        display: none;
+      }
+    }
+
+    .dialog {
+      // 內容容器(裝圖片和文字)
+      position: relative;
+      top: -4rem;
+      left: 0;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      border-radius: 8px;
+      box-shadow: -5px 2px 31px rgba($timeline-shadow, $timeline-opacity);
+      @media (max-width: $ipadSize) {
+        top: 8px;
+        max-width: 314px;
+        margin: 0 auto;
+        background: #fff;
+      }
+      &::after{
+        // pc版的時間軸線
+        @extend %pseudo;
+        top: 22%;
+        width: 5px;
+        height: 140%;
+        // border: 1px dashed $timeline-line;
+        z-index: 1;
+        // background: linear-gradient(230deg,#5ed1e1,#bfc2fe,#e8bddb);
+        background: linear-gradient(230deg, #e6d7ef 0%, #bfc2fe 60%, #b0e2ef 80%);
+        @media (max-width: $ipadSize) {
+          display: none;
+        }
+      }
+    }
+
+    .infoBox {
+      // 文字容器
+      background-color: $timeline-main;
+      flex-grow: 1;
+      padding: 1rem;
+      max-height: 8rem;
+      height: 24vw;
+      border-radius: 0px 10px 10px 0px;
+      @media (max-width: $ipadSize) {
+        flex: 0 0 65%;
+        height: 35vw;
+      }
+    }
+    .imgBOx {
+      // 圖片容器
+      max-width: 8rem;
+      max-height: 8rem;
+      width: 24vw;
+      height: 24vw;
+      margin-right: 0rem;
+      @media (max-width: $ipadSize) {
+        width: 35vw;
+        height: 35vw;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 0px 0 10px;
+      }
+    }
+
+    &:nth-of-type(2n+1) {
+      right: 2rem;
+      @media (max-width: $ipadSize) {
+        right: 0;
+      }
+      &::after {
+        right: -1.4rem;
+        border-width: 1.5rem 0rem 1.5rem 2rem;
+        border-color: transparent transparent transparent $timeline-main;
+        border-radius: 5px;
+      }
+      &::before {
+        right: -3.9rem;
+      }
+      .dialog::after {
+        right: -3rem;
+        background: linear-gradient(230deg,#e8bddb,#efd9e8);
+      }
+    }
+
+    &:nth-of-type(2n) {
+      left: 3.7rem;
+      z-index: 1;
+      transform: translateY(85%);
+      margin-top: 8rem;
+      margin-bottom: 3rem;
+      @media (max-width: $ipadSize) {
+        left: 0rem;
+        transform: translateY(0%);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+      &::after {
+        left: -1.4rem;
+        z-index: 0;
+        border-width: 1.5rem 2rem 1.5rem 0;
+        border-color: transparent $timeline-main transparent transparent;
+      }
+      &::before {
+        left: -3.8rem;
+      }
+      .dialog::after {
+        left: -3.04rem;
+        @media (max-width: 1300px) {
+          left: -3.01rem;
+        }
+      }
+      .infoBox{
+        left: -0.3rem;
+        order: 1;
+        border-radius: 10px 0px 0px 10px;
+        @media (max-width: $ipadSize) {
+          border-radius: 0px 10px 10px 0px;
+        }
+      }
+      .imgBOx{
+        order: 2;
+        margin-right: unset;
+        margin-left: 1rem;
+        @media (max-width: $ipadSize) {
+          margin-left: unset;
+        }
+        @media (max-width: $ipadSize) {
+          order: 1;
+        }
+        img {
+          border-radius: 0px 10px 10px 0px;
+          @media (max-width: $ipadSize) {
+            border-radius: 10px 0px 0px 10px;
+          }
+        }
+      }
+    }
+    &:nth-of-type(3n) {
+      .dialog::after {
+        background: linear-gradient(230deg, #b0e2ef 0%, #5ed1e1 60%, #5ed1e1 80%);
+      }
+    }
+  }
+}
+
+// 燈箱
+body.compensate-for-scrollbar {
+  overflow: auto !important;
+}
+.fancybox-slide--html .fancybox-close-small {
+  width: 60px;
+  height: 60px;
+}
+
+.fancybox-content {
+  max-width: 1000px;
+  max-height: 800px;
+  @media only screen and (max-width: 768px) {
+    padding: 5% 5%;
+  }
+}
+
+.modal-title {
+  font-weight: 900;
+  margin-bottom: 1rem;
+  @media only screen and (max-width: 768px) {
+    margin-top: 2rem;
+  }
+}
+
+.modal-subTitle {
+  border-left: 4px solid #000;
+  font-weight: 900;
+  margin-left: 0.25rem;
+  padding: 0 0.25rem 0 0.5rem;
+  margin: 1.5rem 0 1rem 0.25rem;
+}
+
+
+// 我們的客戶
+.customersLogo-item {
+  width: auto;
+  height: 10vw;
+  max-height: 140px;
+  padding: 1rem 1.5rem;
+  @media only screen and (max-width: 768px) {
+    padding: 1% 3%;
   }
 }

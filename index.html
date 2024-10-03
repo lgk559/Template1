@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link
   href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@200;300;400;500&display=swap"
   rel="stylesheet">
@@ -54,6 +56,11 @@
                 <a class="nav-link p js-scroll-item"
                 data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar" 
                 href="#Featured" data-offset="50">精選商品</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link p js-scroll-item"
+                data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar" 
+                href="#OurCustomers" data-offset="50">我們的客戶</a>
               </li>
               <li class="nav-item me-4">
                 <a class="nav-link p js-scroll-item"
@@ -137,6 +144,61 @@
         <p>我們相信，色彩不僅僅是一種視覺享受，更是一種情感的表達。每一個色彩都承載著不同的故事和情感，而我們的飲品，就是將這些故事和情感傳遞給您的媒介。</p>
       </div>
     </div>
+    <!-- > 發展沿革 timeline -->
+    <article class="row mt-5 justify-content-center">
+      <div class="col-lg-7 col-md-10 col-12">
+        <h3 class="section-title text-center mt-3">發展沿革</h3>
+        <div class="timelineBox">
+          <ul class="timeline">
+              <li class="dialog_wrapper">
+                  <div class="dialog">
+                      <div class="imgBOx">
+                          <img src="access/images/timelineItem-1.png" alt="">
+                      </div>
+                      <div class="infoBox">
+                          <h4 class="year">2015/10</h4>
+                          <div class="infoItem p">成立色彩狂想曲品牌<br>台中逢甲店開幕</div>
+                      </div>
+                  </div>
+              </li>
+              <li class="dialog_wrapper">
+                <div class="dialog">
+                    <div class="imgBOx">
+                        <img src="access/images/timelineItem-2.png" alt="">
+                    </div>
+                    <div class="infoBox">
+                        <h4 class="year">2018/12</h4>
+                        <div class="infoItem">狂賀銷售突破<br>
+                          10000杯</div>
+                    </div>
+                </div>
+              </li>
+              <li class="dialog_wrapper">
+                <div class="dialog">
+                    <div class="imgBOx">
+                        <img src="access/images/timelineItem-3.png" alt="">
+                    </div>
+                    <div class="infoBox">
+                        <h4 class="year">2020/08</h4>
+                        <div class="infoItem">榮獲人氣飲料票選總冠軍</div>
+                    </div>
+                </div>
+              </li>
+              <li class="dialog_wrapper">
+                <div class="dialog">
+                    <div class="imgBOx">
+                        <img src="access/images/timelineItem-4.png" alt="">
+                    </div>
+                    <div class="infoBox">
+                        <h4 class="year">2020/12</h4>
+                        <div class="infoItem">台北忠孝店歡慶開幕</div>
+                    </div>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </article>
     <div class="jarallax">
       <img src="access/images/About us-bg.webp" class="img-fluid jarallax-img">
       <div class="cover">
@@ -194,46 +256,140 @@
     <div class="swiper sub_Swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide page1">
-          <div class="bg">
-            <!-- background-color: #e64774 -->
+          <div class="goodImg">
             <div style="background-image: url('access/images/drinks_BerryYogurt_all.webp')"></div>
           </div>
           <div class="txtBox">
-            <p class="info-subTitle">芒果、檸檬汁、氣泡水、椰奶</p>
-            <h4 class="info-title">再芒椰要<br class="d-md-block d-none">戀上你</h4>
-            <p class="info">芒果的香甜與檸檬的微酸交織在一起，氣泡水的刺激感帶來清爽暢快的感受。椰奶的香濃讓整體風味更加濃郁。</p>
-            <button type="button" class="btn-item btn btn-dark mt-md-4 mt-1 rounded-0 px-5">來一杯!</button>
+            <p class="info-subTitle">新鮮草莓、藍莓、覆盆子、希臘優格、蜂蜜、燕麥</p>
+            <h4 class="info-title">日出<br class="d-md-block d-none">莓果優格</h4>
+            <p class="info">這款飲品以漸層的色彩呈現出日出的美景，莓果的酸甜滋味與優格的濃稠口感完美結合，燕麥的顆粒感增添了口感的層次。</p>
+            <button type="button" class="btn-item btn btn-dark mt-1 rounded-0 px-5" data-fancybox data-src="#modal-item1" href="javascript:;">來一杯!</button>
+            <div style="display: none;" id="modal-item1">
+              <div class="modalInner">
+                <div class="d-flex flex-wrap">
+                  <div class="col-md-6 col-8 m-auto">
+                    <img class="img-fluid" src="access/images/drinks_MangoCoconutMilk_all.webp" alt="">
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="txtBox px-md-5 p-0">
+                      <h4 class="modal-title">日出莓果優格</h4>
+
+                      <h5 class="modal-subTitle">原料成分</h5>
+                      <p class="info">新鮮草莓、藍莓、覆盆子、希臘優格、蜂蜜、燕麥</p>
+
+                      <h5 class="modal-subTitle">特色介紹</h5>
+                      <p class="info">這款飲品以漸層的色彩呈現出日出的美景，莓果的酸甜滋味與優格的濃稠口感完美結合，燕麥的顆粒感增添了口感的層次。</p>
+
+                      <h5 class="modal-subTitle">口感形容</h5>
+                      <p class="info">這款飲品以漸層的色彩呈現出日出的美景，莓果的酸甜滋味與優格的濃稠口感完美結合，燕麥的顆粒感增添了口感的層次。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="swiper-slide page2">
-          <div class="bg">
+          <div class="goodImg">
             <div style="background-image: url('access/images/drinks_MangoCoconutMilk_all.webp')"></div>
           </div>
           <div class="txtBox">
             <p>芒果、檸檬汁、氣泡水、椰奶</p>
             <h4 class="info-title">再芒椰要<br class="d-md-block d-none">戀上你</h4>
             <p class="info mt-md-4 mt-1">芒果的香甜與檸檬的微酸交織在一起，氣泡水的刺激感帶來清爽暢快的感受。椰奶的香濃讓整體風味更加濃郁。</p>
-            <button type="button" class="btn-item btn btn-dark mt-1 rounded-0 px-5">來一杯!</button>
+            <button type="button" class="btn-item btn btn-dark mt-1 rounded-0 px-5" data-fancybox data-src="#modal-item2" href="javascript:;">來一杯!</button>
+            <div style="display: none;" id="modal-item2">
+              <div class="modalInner">
+                <div class="d-flex flex-wrap">
+                  <div class="col-md-6 col-8 m-auto">
+                    <img class="img-fluid" src="access/images/drinks_MangoCoconutMilk_all.webp" alt="">
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="txtBox px-md-5 p-0">
+                      <h4 class="modal-title">再芒椰要戀上你</h4>
+
+                      <h5 class="modal-subTitle">原料成分</h5>
+                      <p class="info">芒果、檸檬汁、氣泡水、椰奶</p>
+
+                      <h5 class="modal-subTitle">特色介紹</h5>
+                      <p class="info">芒果的香甜與檸檬的微酸交織在一起，氣泡水的刺激感帶來清爽暢快的感受。椰奶的香濃讓整體風味更加濃郁。</p>
+
+                      <h5 class="modal-subTitle">口感形容</h5>
+                      <p class="info">芒果的香甜與檸檬的微酸交織在一起，氣泡水的刺激感帶來清爽暢快的感受。椰奶的香濃讓整體風味更加濃郁。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          
         </div>
         <div class="swiper-slide page3">
-          <div class="bg">
+          <div class="goodImg">
             <div style="background-image: url('access/images/drinks_MatchaRedBean_all.webp')"></div>
           </div>
           <div class="txtBox">
-            <h4 class="info-title">抹茶紅豆</h4>
-            <p class="info mt-1">純正抹茶的濃郁與紅豆的甜美完美融合，為你帶來一場美妙的味覺盛宴。</p>
-            <button type="button" class="btn-item btn btn-dark mt-4 rounded-0 px-5">來一杯!</button>
+            <p>抹茶粉、紅豆、椰奶、牛奶</p>
+            <h4 class="info-title">椰語<br>抹茶紅豆</h4>
+            <p class="info mt-1">抹茶的濃郁香氣與紅豆的綿密口感交織在一起，椰奶的香甜讓整體風味更加豐富。</p>
+            <button type="button" class="btn-item btn btn-dark mt-1 rounded-0 px-5" data-fancybox data-src="#modal-item3" href="javascript:;">來一杯!</button>
+            <div style="display: none;" id="modal-item3">
+              <div class="modalInner">
+                <div class="d-flex flex-wrap">
+                  <div class="col-md-6 col-8 m-auto">
+                    <img class="img-fluid" src="access/images/drinks_MatchaRedBean_all.webp" alt="">
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="txtBox px-md-5 p-0">
+                      <h4 class="modal-title">椰語抹茶紅豆</h4>
+
+                      <h5 class="modal-subTitle">原料成分</h5>
+                      <p class="info">抹茶粉、紅豆、椰奶、牛奶</p>
+
+                      <h5 class="modal-subTitle">特色介紹</h5>
+                      <p class="info">抹茶的濃郁香氣與紅豆的綿密口感交織在一起，椰奶的香甜讓整體風味更加豐富。</p>
+
+                      <h5 class="modal-subTitle">口感形容</h5>
+                      <p class="info">抹茶的濃郁香氣與紅豆的綿密口感交織在一起，椰奶的香甜讓整體風味更加豐富。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="swiper-slide page4">
-          <div class="bg">
+          <div class="goodImg">
             <div style="background-image: url('access/images/drinks_tropicalRainforest_all.webp')"></div>
           </div>
           <div class="txtBox">
-            <h4 class="info-title">熱帶雨林</h4>
-            <p class="info mt-1">感受到陽光與海風的交織。從酸甜的芒果到清新的鳳梨，帶來一段美妙的熱帶之旅。</p>
-            <button type="button" class="btn-item btn btn-dark mt-1 rounded-0 px-5">來一杯!</button>
+            <p>鳳梨、芒果、百香果、椰子水、蝶豆花茶、氣泡水</p>
+            <h4 class="info-title">熱帶雨林<br class="d-md-block d-none">探險</h4>
+            <p class="info mt-md-4 mt-1">鳳梨、芒果、百香果的熱帶風情在口中爆發，蝶豆花的淡淡花香為飲品增添了層次感，椰子水的清甜與氣泡水的刺激感帶來清爽的口感。</p>
+            <button type="button" class="btn-item btn btn-dark mt-1 rounded-0 px-5" data-fancybox data-src="#modal-item2" href="javascript:;">來一杯!</button>
+            <div style="display: none;" id="modal-item2">
+              <div class="modalInner">
+                <div class="d-flex flex-wrap">
+                  <div class="col-md-6 col-8 m-auto">
+                    <img class="img-fluid" src="access/images/drinks_MangoCoconutMilk_all.webp" alt="">
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="txtBox px-md-5 p-0">
+                      <h4 class="modal-title">熱帶雨林探險</h4>
+
+                      <h5 class="modal-subTitle">原料成分</h5>
+                      <p class="info">鳳梨、芒果、百香果、椰子水、蝶豆花茶、氣泡水</p>
+
+                      <h5 class="modal-subTitle">特色介紹</h5>
+                      <p class="info">鳳梨、芒果、百香果的熱帶風情在口中爆發，蝶豆花的淡淡花香為飲品增添了層次感，椰子水的清甜與氣泡水的刺激感帶來清爽的口感。</p>
+
+                      <h5 class="modal-subTitle">口感形容</h5>
+                      <p class="info">鳳梨、芒果、百香果的熱帶風情在口中爆發，蝶豆花的淡淡花香為飲品增添了層次感，椰子水的清甜與氣泡水的刺激感帶來清爽的口感。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -243,6 +399,22 @@
   </div>
   <div class="swiper-button-prev sup_swiper-button-prev"></div>
   <div class="swiper-button-next sup_swiper-button-next"></div>
+</section>
+
+<!-- 我們的客戶 Our Customers   -->
+<section id="OurCustomers" class="row mt-5 justify-content-center">
+  <div class="col-lg-8 col-md-10 col-12">
+    <h2 class="section-title text-center mt-3">我們的客戶 <span class="section-subtitle text-colorful">Our Customers</span></h2>
+    <div class="d-flex flex-wrap justify-content-center py-md-5 pt-4">
+      <img class="col-auto customersLogo-item" src="access/images/Customers/Customers1.png" alt="">
+      <img class="col-auto customersLogo-item" src="access/images/Customers/Customers2.png" alt="">
+      <img class="col-auto customersLogo-item" src="access/images/Customers/Customers3.png" alt="">
+      <img class="col-auto customersLogo-item" src="access/images/Customers/Customers4.png" alt="">
+      <img class="col-auto customersLogo-item" src="access/images/Customers/Customers5.png" alt="">
+      <img class="col-auto customersLogo-item" src="access/images/Customers/Customers6.png" alt="">
+      <img class="col-auto customersLogo-item" src="access/images/Customers/Customers7.png" alt="">
+    </div>
+  </div>
 </section>
 
 <!-- 客戶評價 Customers says -->
@@ -494,6 +666,8 @@
   <script src="access/js/gsap.min.js"></script>
   <script src="access/js/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/gsap/dist/Observer.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- <script type="text/javascript" src="access/js/plugins.js"></script> -->
   <script src="access/js/main.js?v=016"></script>
