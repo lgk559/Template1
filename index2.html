@@ -28,7 +28,8 @@
           data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <i class="bi bi-list"></i>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="false">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel"
+          data-bs-scroll="false">
           <div class="offcanvas-header px-4 pb-0">
             <a class="navbar-brand ms-2" href="index.html">
               <!-- <img src="/access/images/logo.png" class="logo"> -->
@@ -39,9 +40,16 @@
           <div class="offcanvas-body">
             <ul id="navbar" class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link p js-scroll-item me-4" 
-                data-bs-dismiss="offcanvas" aria-label="Close"
-                data-bs-target="#bdNavbar" href="#video-carousel">影片輪播</a>
+                <a class="nav-link p js-scroll-item me-4" data-bs-dismiss="offcanvas" aria-label="Close"
+                  data-bs-target="#bdNavbar" href="#video-carousel">影片輪播</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p js-scroll-item me-4" data-bs-dismiss="offcanvas" aria-label="Close"
+                  data-bs-target="#bdNavbar" href="#video">單則影片</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p js-scroll-item me-4" data-bs-dismiss="offcanvas" aria-label="Close"
+                  data-bs-target="#bdNavbar" href="#News">最新消息</a>
               </li>
             </ul>
           </div>
@@ -107,9 +115,10 @@
   </section>
   <section id="video-carousel" class="mt-5 position-relative">
     <div class="">
-      <h2 class="section-title text-center mb-5">影片輪播 <span class="section-subtitle text-colorful">Video Carousel</span></h2>
+      <h2 class="section-title text-center mt-3 mb-3">影片輪播 <span class="section-subtitle text-colorful">Video
+          Carousel</span></h2>
     </div>
-    <div class="video-swiper-wrapper">
+    <div class="video-wrapper">
       <div class="swiper-container swiper-youtube-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -136,8 +145,82 @@
       </div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
-      
+
     </div>
+  </section>
+
+  <section id="video" class="mt-5 position-relative">
+    <div class="">
+      <h2 class="section-title text-center mt-3 mb-3">單則影片 <span class="section-subtitle text-colorful">Video</span>
+      </h2>
+    </div>
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://youtube.com/embed/5dR4u3xmE6g?si=JAVBK7qOfVZyHS98&rel=0&loop=1"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <section id="News" class="news_Swiper mt-5">
+    <div class="">
+      <h2 class="section-title text-center mt-3 mb-3">最新消息 <span class="section-subtitle text-colorful">News</span>
+      </h2>
+    </div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a class="card" href="#">
+          <div class="card-cover">
+            <img src="access/images/banner-bg_01.webp" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h4 class="card-title ">文章標題，超出一行會省略</h4>
+            <p class="card-text">1Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="card" href="#">
+          <div class="card-cover">
+            <img src="access/images/banner-bg_02.webp" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">XXXX</h3>
+            <p class="card-text">2Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="card" href="#">
+          <div class="card-cover">
+            <img src="access/images/banner-bg_03.webp" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">XXXX</h3>
+            <p class="card-text">3ome quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a class="card" href="#">
+          <div class="card-cover">
+            <img src="access/images/banner-bg_01.webp" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">XXXX</h3>
+            <p class="card-text">4Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="swiper-pagination swiper_news-pagination"></div>
+    <div class="swiper-button-prev swiper_news-button-prev"></div><!--左箭头。如果放置在swiper外面，需要自定义样式。-->
+    <div class="swiper-button-next swiper_news-button-next"></div><!--右箭头。如果放置在swiper外面，需要自定义样式。-->
   </section>
 
   <footer id="footer" class="row overflow-hidden padding-large mt-5 border-top pt-3">
@@ -222,7 +305,9 @@
   <script src="access/js/ScrollTrigger.min.js"></script>
   <script src="https://unpkg.com/gsap/dist/Observer.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+    integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- <script type="text/javascript" src="access/js/plugins.js"></script> -->
   <script src="access/js/main.js?v=016"></script>

@@ -67,6 +67,32 @@
             }
         })
 
+        const news_Swiper = new Swiper('.news_Swiper', {
+            // direction: 'horizontal',
+            speed: 2400,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: {
+                el: ".swiper_news-pagination",
+                dynamicBullets: false,
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper_news-button-next",
+                prevEl: ".swiper_news-button-prev",
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 16
+                  },
+                577: {
+                slidesPerView: 2,
+                spaceBetween: 16
+                },
+              },
+        });
+
 
 
         // init jarallax parallax
@@ -146,84 +172,84 @@
 
 
 
+        // 影片輪播
+        if ($('.video-wrapper').length > 0) {
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+            // 3. This function creates an <iframe> (and YouTube player)
+    
+            var initPlayer = function (element) {
+                var player = element.querySelector('.video-iframe');
+                var button = element.querySelector('.video-play');
+                var ytplayer = new YT.Player(player, {
+                    playerVars: {
+                        'autoplay': 0,
+                        'modestbranding': 1,
+                        'controls': 0,
+                        'rel': 0,
+                    },
+                    videoId: element.dataset.id
+                });
+    
+                button.addEventListener('click', function () {
+                    console.log(ytplayer);
+                    console.log(ytplayer.getPlayerState());
+                    ytplayer.playVideo();
+                    switch (ytplayer.getPlayerState()) {
+                        case 1:
+                            ytplayer.stopVideo();
+                            break;
+                        default:
+                            ytplayer.playVideo();
+                            break;
+                    }
+                });
+            };
+            // var titles = ['Page 1', 'Page 2', 'Page 3'];
+            var swiper_youtube = new Swiper('.swiper-youtube-container', {
+                loop: true,  // 循環
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                // pagination: {
+                //     el: '.swiper-pagination',
+                //     type: 'bullets',
+                //     clickable: true,
+                // },
+                lazy: {
+                    loadPrevNext: true,
+                },
+                // paginationBulletRender: function (index, className) {
+                //     return '<span class="' + className + '">' + titles[index] + '</span>';
+                // }
+            }).on('slideChange', function () {
+                var isVideo = swiper_youtube.slides[swiper_youtube.previousIndex].querySelector('.video-container');
+                if (isVideo) {
+                    YT.get(isVideo.querySelector('iframe').id).stopVideo();
+                    console.log(isVideo.querySelector('iframe').id);
+                }
+            });
+    
+            window.onYouTubePlayerAPIReady = function () {
+                var container = document.querySelectorAll('.video-container');
+                for (var i = 0; i < container.length; i++) {
+                    initPlayer(container[i])
+                }
+            };
+    
+            if ($('.video-wrapper .swiper-slide').length < 2) {
+                $('.video-ctrl').hide();
+            }
+        }
     }); // End of a document
 
 
 
 
-    // 影片輪播
-    if ($('.video-swiper-wrapper').length > 0) {
-        var tag = document.createElement('script');
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        // 3. This function creates an <iframe> (and YouTube player)
-
-        var initPlayer = function (element) {
-            var player = element.querySelector('.video-iframe');
-            var button = element.querySelector('.video-play');
-            var ytplayer = new YT.Player(player, {
-                playerVars: {
-                    'autoplay': 0,
-                    'modestbranding': 1,
-                    'controls': 0,
-                    'rel': 0,
-                },
-                videoId: element.dataset.id
-            });
-
-            button.addEventListener('click', function () {
-                console.log(ytplayer);
-                console.log(ytplayer.getPlayerState());
-                ytplayer.playVideo();
-                switch (ytplayer.getPlayerState()) {
-                    case 1:
-                        ytplayer.stopVideo();
-                        break;
-                    default:
-                        ytplayer.playVideo();
-                        break;
-                }
-            });
-        };
-        // var titles = ['Page 1', 'Page 2', 'Page 3'];
-        var swiper_youtube = new Swiper('.swiper-youtube-container', {
-            loop: true,  // 循環
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            // pagination: {
-            //     el: '.swiper-pagination',
-            //     type: 'bullets',
-            //     clickable: true,
-            // },
-            lazy: {
-                loadPrevNext: true,
-            },
-            // paginationBulletRender: function (index, className) {
-            //     return '<span class="' + className + '">' + titles[index] + '</span>';
-            // }
-        }).on('slideChange', function () {
-            var isVideo = swiper_youtube.slides[swiper_youtube.previousIndex].querySelector('.video-container');
-            if (isVideo) {
-                YT.get(isVideo.querySelector('iframe').id).stopVideo();
-                console.log(isVideo.querySelector('iframe').id);
-            }
-        });
-
-        window.onYouTubePlayerAPIReady = function () {
-            var container = document.querySelectorAll('.video-container');
-            for (var i = 0; i < container.length; i++) {
-                initPlayer(container[i])
-            }
-        };
-
-        if ($('.video-swiper-wrapper .swiper-slide').length < 2) {
-            $('.video-ctrl').hide();
-        }
-    }
 
 
 })(jQuery);
