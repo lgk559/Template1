@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Documentttt</title>
+  <title>其它</title>
   <link rel="stylesheet" type="text/css" href="access/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="access/css/main2.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="access/css/swiper.css">
+  <link rel="stylesheet" type="text/css" href="access/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -18,51 +19,29 @@
 </head>
 
 <body>
-  <header id="header" class="site-header text-black sticky-top bg-light text-dark">
-    <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">
-          <img src="https://fakeimg.pl/100x50/ccc/" class="logo">
+  <header id="header" class="row site-header text-black fixed-top text-dark">
+    <nav id="header-nav" class="navbar navbar-expand-md px-3 border-md-bottom border-0">
+      <div class="container-fluid justify-content-md-center justify-content-between">
+        <a class="navbar-brand p-0" href="index.html">
         </a>
-        <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
+        <button class="navbar-toggler d-flex d-md-none order-3 p-0" type="button" data-bs-toggle="offcanvas"
           data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <svg class="navbar-icon" width="50" height="50">
-            <use xlink:href="#navbar-icon"></use>
-          </svg>
+          <i class="bi bi-list"></i>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="false">
           <div class="offcanvas-header px-4 pb-0">
-            <a class="navbar-brand" href="index.html">
-              <img src="https://fakeimg.pl/100x50/ccc/" class="logo">
+            <a class="navbar-brand ms-2" href="index.html">
+              <!-- <img src="/access/images/logo.png" class="logo"> -->
             </a>
             <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"
               data-bs-target="#bdNavbar"></button>
           </div>
           <div class="offcanvas-body">
             <ul id="navbar" class="navbar-nav text-uppercase justify-content-end align-items-center flex-grow-1 pe-3">
-              <li class="nav-item dropdown">
-                <a class="nav-link me-4 active dropdown-toggle" href="#billboard" id="dropdownPages"
-                  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">飲品介紹</a>
-                <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownPages">
-                  <li>
-                    <a href="index.html" class="dropdown-item item-anchor">茶類系列</a>
-                  </li>
-                  <li>
-                    <a href="home2.html" class="dropdown-item item-anchor">創意特調</a>
-                  </li>
-                  <li>
-                    <a href="home2.html" class="dropdown-item item-anchor">歐蕾特調</a>
-                  </li>
-                </ul>
-              </li>
               <li class="nav-item">
-                <a class="nav-link me-4" href="#about-us">關於我們</a>
-              </li>
-              <li class="nav-item me-4">
-                <a class="nav-link" href="#">門市據點</a>
-              </li>
-              <li class="nav-item me-4">
-                <a class="nav-link" href="#">最新消息</a>
+                <a class="nav-link p js-scroll-item me-4" 
+                data-bs-dismiss="offcanvas" aria-label="Close"
+                data-bs-target="#bdNavbar" href="#video-carousel">影片輪播</a>
               </li>
             </ul>
           </div>
@@ -70,183 +49,152 @@
       </div>
     </nav>
   </header>
-  <div class="box">
-    <div class="swiper sub_Swiper">
+  <section id="kv" class="kv row">
+    <div class="swiper kv_Swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide page1">
-          <div class="bg">
-            <!-- background-color: #e64774 -->
-            <div style="background: linear-gradient(180deg, #e64774, #fbfbfb);"></div>
-          </div>
-          <div class="txtBox">
-            <h1 class="title">莓果優格</h1>
-            <h3 class="info mt-4">選用了新鮮豐滿的莓果，搭配細膩的燕麥，滿滿的自然甜蜜。</h3>
-            <button type="button" class="btn btn-warning mt-4">飲品介紹</button>
-          </div>
+        <div class="swiper-slide">
+          <img class="" src="access/images/banner-bg_01.webp" alt="">
           <div class="cover">
-            <img src="access/images/drinks_BerryYogurt.png" alt="">
+            <div class="title text-shadow">
+              藝術家的<br>調色盤
+            </div>
+            <div class="subTitle text-shadow pt-2">
+              每一口都是一幅畫
+            </div>
+            <div class="info text-shadow pt-3">
+              一群藝術家將對色彩的熱愛融入飲品中，每一杯飲料都是一幅獨特的藝術作品<br>
+              我們希望透過色彩繽紛的飲品，將世界的美好帶給每一個人<br>
+              讓大家在忙碌的生活中，找到一份屬於自己的色彩，感受生活的美好<br>
+            </div>
           </div>
         </div>
-        <div class="swiper-slide page2">
-          <div class="bg">
-            <div style="background: linear-gradient(180deg, #fd9809, #fbfbfb);"></div>
-          </div>
-          <div class="txtBox">
-            <h1 class="title">芒果椰奶</h1>
-            <h3 class="info mt-4">每一款飲料都選用新鮮、天然的水果，配方獨特，帶來無與倫比的風味和清涼感。</h3>
-            <button type="button" class="btn btn-warning mt-4 t">飲品介紹</button>
-          </div>
+        <div class="swiper-slide">
+          <img class="" src="access/images/banner-bg_02.webp" alt="">
           <div class="cover">
-            <img src="access/images/mango.png" alt="">
+            <div class="title text-shadow">
+              藝術家的<br>調色盤
+            </div>
+            <div class="subTitle text-shadow pt-2">
+              每一口都是一幅畫
+            </div>
+            <div class="info text-shadow pt-3">
+              一群藝術家將對色彩的熱愛融入飲品中，每一杯飲料都是一幅獨特的藝術作品<br>
+              我們希望透過色彩繽紛的飲品，將世界的美好帶給每一個人<br>
+              讓大家在忙碌的生活中，找到一份屬於自己的色彩，感受生活的美好<br>
+            </div>
           </div>
         </div>
-        <div class="swiper-slide page3">
-          <div class="bg">
-            <div style="background: linear-gradient(180deg, #44c099, #e9c3c3);"></div>
-          </div>
-          <div class="txtBox">
-            <h1 class="title">抹茶紅豆</h1>
-            <h3 class="info mt-4">純正抹茶的濃郁與紅豆的甜美完美融合，為你帶來一場美妙的味覺盛宴。</h3>
-            <button type="button" class="btn btn-warning mt-4 t">飲品介紹</button>
-          </div>
+        <div class="swiper-slide">
+          <img class="" src="access/images/banner-bg_03.webp" alt="">
           <div class="cover">
-            <img src="access/images/drinks_MatchaRedBean.png" alt="">
-          </div>
-        </div>
-        <div class="swiper-slide page4">
-          <div class="bg">
-            <div style="background: linear-gradient(180deg, #96ccea, #d1a4e7,#67d7b3);"></div>
-          </div>
-          <div class="txtBox">
-            <h1 class="title">熱帶雨林</h1>
-            <h3 class="info mt-4">感受到陽光與海風的交織。從酸甜的芒果到清新的鳳梨，帶來一段美妙的熱帶之旅。</h3>
-            <button type="button" class="btn btn-warning mt-4 t">飲品介紹</button>
-          </div>
-          <div class="cover">
-            <img src="access/images/pineapple.png" alt="">
+            <div class="title text-shadow">
+              藝術家的<br>調色盤
+            </div>
+            <div class="subTitle text-shadow pt-2">
+              每一口都是一幅畫
+            </div>
+            <div class="info text-shadow pt-3">
+              一群藝術家將對色彩的熱愛融入飲品中，每一杯飲料都是一幅獨特的藝術作品<br>
+              我們希望透過色彩繽紛的飲品，將世界的美好帶給每一個人<br>
+              讓大家在忙碌的生活中，找到一份屬於自己的色彩，感受生活的美好<br>
+            </div>
           </div>
         </div>
       </div>
-
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
     </div>
-
-    <div class="swiper max_Swiper">
-      <div class="swiper-wrapper swiper-no-swiping">
-        <div class="swiper-slide">
-          <img src="access/images/drinks_BerryYogurt.png" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="access/images/drinks_MangoCoconutMilk.png" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="access/images/drinks_MatchaRedBean.png" alt="">
-        </div>
-        <div class="swiper-slide">
-          <img src="access/images/drinks_tropicalRainforest.png" alt="">
-        </div>
-      </div>
+  </section>
+  <section id="video-carousel" class="mt-5 position-relative">
+    <div class="">
+      <h2 class="section-title text-center mb-5">影片輪播 <span class="section-subtitle text-colorful">Video Carousel</span></h2>
     </div>
-    <div class="swiper-button-prev swiper_index-button-prev"></div><!--左箭头。如果放置在swiper外面，需要自定义样式。-->
-    <div class="swiper-button-next swiper_index-button-next"></div><!--右箭头。如果放置在swiper外面，需要自定义样式。-->
-  </div>
-
-  <div class="swiper news_Swiper mt-5">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="card">
-          <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">1Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="video-swiper-wrapper">
+      <div class="swiper-container swiper-youtube-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="video-container" data-id="Vg_OI3AwK7E">
+              <div class="video-iframe"></div>
+              <div class="video-play"></div>
+            </div>
+            <p class='title'>省省吧 叫foodpanda送</p>
+          </div>
+          <div class="swiper-slide">
+            <div class="video-container" data-id="5dR4u3xmE6g">
+              <div class="video-iframe"></div>
+              <div class="video-play"></div>
+            </div>
+            <p class='title'>第七話：泱泱賀瓏 CP 甜蜜回歸</p>
+          </div>
+          <div class="swiper-slide">
+            <!-- 如果項目是圖片的話 -->
+            <img class="img-fluid" src="access/images/banner-bg_01.webp" alt="圖片標題">
+            <p class='title'>圖片標題</p>
           </div>
         </div>
+        <!-- <div class="swiper-pagination"></div> -->
       </div>
-      <div class="swiper-slide">
-        <div class="card">
-          <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">2Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="card">
-          <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">3ome quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="card">
-          <img src="https://fakeimg.pl/150x100/ccc/" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">4Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      
     </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-prev swiper_news-button-prev"></div><!--左箭头。如果放置在swiper外面，需要自定义样式。-->
-    <div class="swiper-button-next swiper_news-button-next"></div><!--右箭头。如果放置在swiper外面，需要自定义样式。-->
-  </div>
-  <footer id="footer" class="overflow-hidden padding-large mt-5 border-top pt-3">
+  </section>
+
+  <footer id="footer" class="row overflow-hidden padding-large mt-5 border-top pt-3">
     <div class="container-fluid">
-      <div class="row">
-        <div class="row d-flex flex-wrap justify-content-center text-center">
-          <!-- <div class="col-lg-3 col-sm-6 pb-3 pe-4">
-            <div class="footer-menu">
-              <img src="images/main-logo.png" alt="logo" class="pb-3">
-              <p>Mi facilisis facilisis orci vitae. Cum nisi morbi integer tincidunt ornare ac praesent in. Dolor tempus arcu sit quis nunc arcu facilisis quis eget nisi morbi integer.</p>
-            </div>
-            <div class="copyright">
-              <p>© Copyright. <a target="_blank" href="http://www.mobanwang.com/" title="网页模板">网页模板</a>
-              </p>
-            </div>
-          </div> -->
+      <div class="footer-main row flex-wrap justify-content-lg-around justify-content-center text-left">
+        <div class="col-lg-auto col-sm-6 text-lg-left text-center pb-3 pe-4">
+          <div class="footer-menu">
+            <img src="access/images/logo_drank.png" alt="logo" class="logo pb-3">
+            <p class="text-secondary">每一杯飲品<br>都是一幅獨一無二的藝術作品<br>訴說著來自世界各地的故事</p>
+          </div>
+          <div class="footer-menu">
+            <a class="mx-1" href=""><i class="bi bi-facebook"></i></a>
+            <a class="mx-1" href=""><i class="bi bi-instagram"></i></a>
+            <a class="mx-1" href=""><i class="bi bi-youtube"></i></a>
+            <a class="mx-1" href=""> <i class="bi bi-line"></i></a>
+          </div>
+        </div>
 
-          <div class="col-lg-5 col-sm-6">
+        <div class="col-lg-8 col-sm-12 d-flex flex-wrap justify-content-around">
+          <div class="col-md-auto col-auto order-2">
             <div class="footer-menu text-uppercase">
               <h5 class="widget-title pb-2">快速連結</h5>
-              <ul class="menu-list list-unstyled text-uppercase">
+              <ul class="menu-list list-unstyled text-uppercase text-secondary">
                 <li class="menu-item pb-2">
-                  <a href="#billboard">飲品介紹</a>
+                  <a class="" href="#about">關於我們</a>
                 </li>
                 <li class="menu-item pb-2">
-                  <a class="" href="#about-us">關於我們</a>
+                  <a class="" href="#Services">多元服務</a>
                 </li>
                 <li class="menu-item pb-2">
-                  <a href="#company-services">門市據點</a>
+                  <a class="" href="#Customers">客戶評價</a>
                 </li>
                 <li class="menu-item pb-2">
-                  <a href="#latest-blog">最新消息</a>
+                  <a class="" href="#contact">聯絡我們</a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-lg-2 col-sm-6">
-            <div class="footer-menu text-uppercase">
-              <h5 class="widget-title pb-2">社群連結</h5>
-              <div class="social-links">
-                <ul class="list-unstyled">
-                  <li class="pb-2">
-                    <a href="#">Facebook</a>
-                  </li>
-                  <li class="pb-2">
-                    <a href="#">Instagram</a>
-                  </li>
-                  <li>
-                    <a href="#">Youtube</a>
-                  </li>
-                </ul>
-              </div>
+          <div class="col-md-auto col-12 order-md-2 order-1 my-md-0 mt-3 mb-4">
+            <div class="footer-menu contact-item">
+              <h5 class="widget-title text-uppercase pb-2">聯絡資訊</h5>
+              <p class="text-secondary m-1">10455 台北市健康路123號99樓</p>
+              <p class="text-secondary m-1">0228889995</p>
+              <p class="text-secondary m-1">idiid@jdiis.com</p>
             </div>
           </div>
-          <div class="col-lg-5 col-sm-6">
+          <div class="col-md-auto col-auto order-2">
             <div class="footer-menu contact-item">
               <h5 class="widget-title text-uppercase pb-2">網站使用條款</h5>
-              <p><a href="">網站使用條款</a></p>
-              <p><a href="">隱私保護聲明</a></p>
-              
+              <ul class="menu-list list-unstyled text-uppercase text-secondary">
+                <li class="menu-item pb-2">
+                  <a class="" href="">網站使用條款</a>
+                </li>
+                <li class="menu-item pb-2">
+                  <a class="" href="">隱私保護聲明</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -259,13 +207,25 @@
     </div>
   </footer>
 
-  <script src="access/js/jquery-1.11.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script> -->
   <script type="text/javascript" src="access/js/bootstrap.bundle.min.js"></script>
+  <!-- Jarallax JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+  <!-- Jarallax JS: Optional video extension -->
+  <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax-video.min.js"></script>
+  <script src="access/js/gsap.min.js"></script>
+  <script src="access/js/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/gsap/dist/Observer.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <!-- <script type="text/javascript" src="access/js/plugins.js"></script> -->
-  <script src="access/js/main.js"></script>
+  <script src="access/js/main.js?v=016"></script>
 </body>
 
 </html>

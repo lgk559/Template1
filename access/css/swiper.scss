@@ -1,0 +1,84 @@
+.video-swiper-wrapper {
+    max-width: 800px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+.swiper-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-height: 500px;
+    height: 45vw;
+    // margin-top: 8.8%;
+    left: 0%;
+    @media screen and (max-width: 767px) {
+        height: 75vw;
+    }
+    iframe,.title {
+        width: 100%;
+    }
+    iframe {
+        max-height: 450px;
+        height: 40vw;
+        position: relative;
+        @media screen and (max-width: 767px) {
+            height: 60vw;
+        }
+    }
+    .title{
+    position: absolute;
+    top: 92%;
+    text-align: center;
+    font-size: 100%;
+    @media screen and (max-width: 767px) {
+        top: 83%;
+        font-size: 3vw;
+    }
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    z-index: 1;
+    // transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 55% !important;
+    max-width: 55px;
+    max-height: 88px;
+    width: 5vw;
+    height: 8vw;
+    display: block;
+    text-indent: -999999px;
+    background-size: cover !important;
+}
+.swiper-button-prev {
+    background: url(../images/prev.png) no-repeat;
+}
+.swiper-button-next {
+    background: url(../images/next.png) no-repeat;
+}
+
+.swiper-pagination {
+    //小點點
+    position: relative;
+    z-index: 1;
+    margin-top: 5%;
+    .swiper-pagination-bullet {
+        max-width: 20px;
+        max-height: 20px;
+        width: 4vw;
+        height: 4vw;
+        margin: 5px 11px;
+        opacity: 1;
+        background-color: #545454;
+    }
+    .swiper-pagination-bullet-active,
+    .swiper-pagination-bullet:hover {
+        background-color: #0188f2;
+    }
+    .swiper-pagination-bullet:hover {
+        opacity: 0.5;
+    }
+}
