@@ -5,6 +5,11 @@
   border-color: #F8D06B;
 }
 
+.btn-colorful {
+  color: #fff;
+  background-color: #ff0066;
+}
+
 .text-colorful {
   color: #ff0066;
 }
@@ -186,6 +191,10 @@ footer .footer-main {
   font-weight: 400;
 }
 
+.material-symbols-outlined {
+  margin-right: 3%;
+}
+
 .swiper-pagination-bullet {
   width: 1rem;
   height: 1rem;
@@ -209,6 +218,11 @@ footer .footer-main {
 }
 .s-block {
   position: absolute;
+}
+
+#header-nav {
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .kv .title {
@@ -498,6 +512,7 @@ footer .footer-main {
 @media only screen and (max-width: 768px) {
   .jarallax {
     min-height: 200px;
+    height: 130vw;
   }
 }
 
@@ -1033,4 +1048,83 @@ body.compensate-for-scrollbar {
   .customersLogo-item {
     padding: 1% 3%;
   }
+}
+
+#subheader {
+  background-color: #ff0066;
+  height: 13vw;
+  max-height: 60px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+#subheader .subheader-inner {
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+}
+#subheader .title {
+  position: absolute;
+  top: 60%;
+  color: #fff;
+}
+#subheader .goBackBtn {
+  position: absolute;
+  top: 60%;
+  right: 4%;
+  width: 6rem;
+}
+
+.article i {
+  font-size: 30px;
+  color: #ff0066;
+  height: 13vw;
+}
+.article .article-inner {
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto;
+}
+.article .news-detail__header ul {
+  list-style-type: none;
+}
+.article .news-detail__header ul li:not(:last-of-type):nth-of-type(2n) {
+  padding: 0 2%;
+  margin: 0 2%;
+}
+.article .news-detail__header ul li {
+  white-space: nowrap;
+}
+.article .news-detail__header .community-menu {
+  margin-right: 2%;
+  white-space: nowrap;
+}
+.article .news-detail__header .community-menu a {
+  margin: 0.5rem;
+}
+.article .news-detail__header .goBackBtn {
+  margin-left: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  border: 3px solid #fff;
+  border-radius: 5px;
+}
+.article .news-detail__header .goBackBtn:hover {
+  background-color: #fff;
+  color: #ff0066;
+  border: 3px solid #ff0066;
+  box-sizing: border-box;
+}
+.article .article-inner .news-content {
+  border-top: 0.5rem solid #ff0066;
+  margin-top: 0%;
+  padding-top: 5%;
+}
+.article .marker {
+  background-color: #ffdd00;
+  padding: 0rem 0.5rem;
+}
+.article a {
+  color: #ff0066;
 }/*# sourceMappingURL=main.css.map */

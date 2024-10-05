@@ -108,10 +108,12 @@
         setTimeout(function () {
             gsap.registerPlugin(ScrollTrigger);
             // header
+            let dom_first = document.getElementById("header").nextElementSibling.id;
+            console.log(dom_first)
             gsap.to("#header", {
                 duration: 1,
                 scrollTrigger: {
-                    trigger: '#kv',
+                    trigger: `#${dom_first}`,
                     markers: false,
                     start: "top bottom",
                     end: "bottom top",
