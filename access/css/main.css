@@ -1050,6 +1050,10 @@ body.compensate-for-scrollbar {
   }
 }
 
+.fancybox-content {
+  max-height: 100%;
+}
+
 #subheader {
   background-color: #ff0066;
   height: 13vw;
@@ -1077,6 +1081,9 @@ body.compensate-for-scrollbar {
   width: 6rem;
 }
 
+.article {
+  cursor: default;
+}
 .article i {
   font-size: 30px;
   color: #ff0066;
@@ -1118,7 +1125,7 @@ body.compensate-for-scrollbar {
 }
 .article .article-inner .news-content {
   border-top: 0.5rem solid #ff0066;
-  margin-top: 0%;
+  margin-top: 2%;
   padding-top: 5%;
 }
 .article .marker {

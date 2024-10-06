@@ -1060,6 +1060,9 @@ body.compensate-for-scrollbar {
 }
 
 // 新聞內頁
+.fancybox-content {
+  max-height: 100%;
+}
 #subheader {
   
   // height: 30vw;
@@ -1094,6 +1097,7 @@ body.compensate-for-scrollbar {
   
 }
 .article {
+  cursor: default;
   i {
     font-size: 30px;
     color: #ff0066;
@@ -1140,7 +1144,7 @@ body.compensate-for-scrollbar {
   .article-inner {
     .news-content{
       border-top: 0.5rem solid $--bs-colorful;
-      margin-top: 0%;
+      margin-top: 2%;
       padding-top: 5%;
       // @media only screen and (max-width: 768px) {
       //   margin-top: 3.5%;

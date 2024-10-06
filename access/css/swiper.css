@@ -54,14 +54,13 @@
   position: absolute;
   z-index: 1;
   transform: translateY(-50%);
-  top: 55% !important;
-  max-width: 55px;
-  max-height: 88px;
-  width: 5vw;
-  height: 8vw;
+  top: 50%;
+  height: 66%;
+  background-repeat: no-repeat;
+  background-position: center !important;
+  background-size: contain !important;
   display: block;
   text-indent: -999999px;
-  background-size: cover !important;
 }
 
 .swiper-button-prev {
